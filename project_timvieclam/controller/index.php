@@ -8,6 +8,8 @@ class ClassName extends AnotherClass
 	{
 		# code...
 	}
-	
+	function y(){
+		
+	}
 }
  ?>
