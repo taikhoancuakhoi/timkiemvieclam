@@ -11,5 +11,7 @@ class ClassName extends AnotherClass
 	function y(){
 		
 	}
+
+	function xy(){}
 }
  ?>
