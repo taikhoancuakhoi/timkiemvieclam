@@ -1,0 +1,204 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+.nav{
+    background: #6699FF;
+}
+
+.header{
+       background:#6699FF;
+    }
+.menu a{
+    text-decoration: none;
+    color:white;
+}
+.menu>li>select>option{
+    list-style-type: none;
+    float: left;
+    
+}
+.menu>li{
+    list-style-type: none;
+    float: left;
+    margin-right: 35px;
+}
+.menu li a{
+    padding:53px;
+    line-height: 100px;
+        
+}
+.menus li{
+        position: relative;
+    }
+.menu li select{
+    margin-top:25px;
+    height: 50px;
+    background:#6699FF;
+    border:1px solid white;
+    color: white;
+    border-radius:5px;
+    margin-left:40px;
+
+}    
+.menu li select option a{
+    border-radius: 5px;
+    height: 40px;
+}
+/*===hết NAV==>*/
+
+.max{
+    margin-top: 15px;
+}
+.body{
+    background:#EEEEEE;
+}
+.border{
+    
+    background: white;
+}
+.hotline{
+    
+    background: white;
+}
+.company-album img{
+    padding: 5px;
+}
+.font .container{
+    background: white;
+}
+.nav-footer{
+   
+    height:150px;
+    background: white;
+}
+.footer{
+    background:#477ba3;
+    height: auto;
+
+}
+.function a{
+    color: white;
+    text-decoration: none;
+}
+.function{
+    color:white;
+}
+.company_fon{
+    background: white;
+}
+.sidebar{
+    background: white;
+}
+.hand_2{
+    margin-left: 200px;
+    margin-top:-106px;
+}
+.carousel-inner img{
+        opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+
+
+/*.carousel-caption {
+  z-index: 10;
+}*/
+
+.carousel .item {
+  height: 500px;
+  background-color:#bbb;
+  overflow:hidden;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+#searchForm {
+    position:absolute;
+    top:63%;
+    left: 30px;
+    
+}
+#searchForm input{
+    height: 40px;
+}
+#searchForm select{
+    height: 40px;
+}
+#searchForm button{
+    height: 40px;
+    width:auto;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 768px) {
+
+  .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    max-width:inherit;
+  }
+
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
+
+
+
+
+/*====Mid nav===================================================*/
+/*.mid-nav{
+background: #333;
+text-transform: uppercase;
+height:40px; overflow: hidden;
+}
+.mid-nav a{
+color:#E2E2E2;
+padding: 12px 12px 12px 6px;
+display: block; float:left;
+}
+.mid-nav a:hover{
+background: #0572AE;
+text-decoration: none;
+}
+.mid-nav .icon { display: none; }
+/*Mid nav responsive cho màn hình dưới 600px*/
+/*@media screen and (max-width: 600px) {
+.mid-nav{height:auto}
+.mid-nav a:not(:first-child) {display: none;}
+.mid-nav a.icon {
+float: right;
+display: block;
+}
+}
+@media screen and (max-width: 600px) {
+.mid-nav.responsive {position: relative;}
+.mid-nav.responsive a.icon {
+position: absolute;
+right: 0;
+top: 0;
+}
+.mid-nav.responsive a {
+float: none;
+display: block;
+text-align: left;
+}
+}*/
