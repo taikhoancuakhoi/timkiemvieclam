@@ -1,0 +1,1 @@
+Trang thông tin chi tiết
