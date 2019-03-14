@@ -1,5 +1,4 @@
 <div class="banner">
-	<?php print_r($_SESSION); ?>
 					<div class="container">
 						<div class="row">
 							<!-- Carousel
