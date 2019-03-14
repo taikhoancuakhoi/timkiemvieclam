@@ -1,17 +1,27 @@
 <?php  
 class User{
 
-	public function UserLogin($tentk,$pass){
-		$sql = "SELECT ten_tk,password FROM tb_tk WHERE ten_tk =:t AND password=:p";
+	public function UserLogin($email,$pass){
+		$sql = "SELECT email,password FROM tb_thanhvien WHERE email =:e AND password=:p";
 		$stmt = DB::getInstance()->prepare($sql);
-		$stmt->bindParam(":t",$tentk);
+		$stmt->bindParam(":e",$email);
 		$stmt->bindParam(":p",$pass);
 		$stmt->execute();
 		$count = $stmt->rowCount();
-		if ($count>0) {
+		if ($count == 1) {
 			return true;
 		}else{
-		return false;
+			return false;
 		}
 	}
+	public function Register($tentv,$sdt,$email,$pass){
+		$sql = "INSERT INTO tb_thanhvien(ten,sdt,email,password) VALUES ('$tentv','$sdt','$email','$pass')";
+		$stmt = DB::getInstance()->prepare($sql);
+		if($stmt->execute()){
+			header("location:".path."/?controller=user&action=checkRegister&success=''");
+		}else{
+			die("Không thể thêm mới thành viên");
+		}
+
+}
 }

@@ -1,4 +1,8 @@
-
+<?php 
+	if (isset($_POST['txt_checkbox'])) {
+		#
+	}
+ ?>
 		
 				<div class="container">
 					<div class="row">
@@ -6,7 +10,7 @@
 						<div class="col-lg-8">
 							<div class="login">
 								<h3 style="text-align: center;font-family: both;color:">Login Thành Viên</h3>
-								<form action="?controller=user&action=checkLogin" method="POST">
+								<form action="?controller=user&action=checkLogin" method="POST" onsubmit="return checkLogin();">
 
 									<table class="table">
 										
@@ -14,7 +18,7 @@
 
 										<tr>
 											<td>Tên đăng nhập</td>
-											<td><input type="text" name="txt_tentk" placeholder="Điền thông tin đăng nhập" class="form-control"></td>
+											<td><input type="text" name="txt_email" placeholder="Điền thông tin đăng nhập" class="form-control"></td>
 										</tr>
 										<tr>
 											<td>Password</td>
@@ -22,7 +26,7 @@
 										</tr>
 										<tr>
 											<td></td>
-											<td><input type="checkbox" name=""> Nhớ thông tin tài khoản</td>
+											<td><input type="checkbox" name="txt_checkbox"> Nhớ thông tin tài khoản</td>
 										</tr>
 										<tr>
 											<td></td>

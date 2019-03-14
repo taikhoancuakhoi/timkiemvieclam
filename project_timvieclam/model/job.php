@@ -15,8 +15,10 @@ class Job{
 				$result[] = $row;
 			}			
 		}
-
-
 		return $result;
 	}
+
+
+
+	
 }	

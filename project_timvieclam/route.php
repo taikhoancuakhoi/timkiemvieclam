@@ -2,11 +2,12 @@
 
 $controllers  = array(
 
-	'user'=>['add','error','login','index','register','checkLogin','logout'],
+	'user'=>['add','error','login','index','register','checkRegister','checkLogin','logout'],
 
 	'job'=>['index','detail','camnang','getJobRandom'],
 
-	'page'=>['error']
+	'page'=>['error'],
+	'document'=>['index']
 );
 
 if (!array_key_exists($controller,$controllers) || !in_array($action,$controllers[$controller])) {

@@ -11,23 +11,28 @@ class UserController extends BaseController{
 			header("location:".path."/?controller=job&action=index");
 		}
 		$this->render("login");
+		if (isset($_GET['result'])) {
+			echo "<script type='text/javascript'>alert('Sai tên tk hoặc mk');</script>'";
+		}
+
 	}
 
 	public function checkLogin(){
 		
-		if(isset($_POST['txt_tentk'])){
-			$tentk = $_POST['txt_tentk'];
+		if(isset($_POST['txt_email'])){
+			$email = $_POST['txt_email'];
 			$pass = $_POST['txt_pass'];
 			$user = new User();
-			$data = $user->UserLogin($tentk,$pass);
+			$data = $user->UserLogin($email,$pass);
 			if ($data == true) {
 				// cấp session cho user
 				$_SESSION['login'] = true;
-				$_SESSION['user'] = $tentk;
+				$_SESSION['email'] = $email;
+
 				header("location:".path."/?controller=job&action=index");
 
 			}else{
-				die("haha");
+				header("location:".path."/?controller=user&action=login&result=''");
 			}
 		}else{
 			die("không có post");
@@ -40,6 +45,17 @@ class UserController extends BaseController{
 	}
 
 	public function register(){
-		$this->render("register");
+		$this->render("register");	
+	}
+	public function checkRegister(){
+		if (isset($_POST['txt_name'])) {
+			$ten = $_POST['txt_name'];
+			$email = $_POST['txt_email'];
+			$pass = $_POST['txt_pass'];
+			$sdt = $_POST['txt_mobile'];
+			$user = new User();
+			$user->Register($ten,$sdt,$email,$pass);
+			header("location:".path."/?controller=user&action=login");
+		}
 	}
 }

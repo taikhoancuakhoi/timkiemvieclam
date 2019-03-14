@@ -9,8 +9,8 @@
    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
  	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  	
-
+	<!-- <link rel="stylesheet" href="asset/js/checkValidate.js" type="text/javascript">  -->
+	<script src="asset/js/checkValidate.js"></script>
   	<link rel="stylesheet" type="text/css" href="asset/css/style.css">
 
 </head>
@@ -23,7 +23,7 @@
 								<ul class="menu">
 
 									<li><img src="asset/images/logo.png" width="160px"></li>
-									<li><a href="#">CẨM NANG</a></li>
+									<li><a href="?controller=document&action=index">CẨM NANG</a></li>
 									<?php 
 										if(isset($_SESSION['login']) && $_SESSION['login']==true){
 									?>	
