@@ -1,71 +1,71 @@
 <div class="banner">
-					<div class="container">
-						<div class="row">
-							<!-- Carousel
-							================================================== -->
-							<div id="myCarousel" class="carousel slide">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							    <li data-target="#myCarousel" data-slide-to="1"></li>
-							    <li data-target="#myCarousel" data-slide-to="2"></li>
-							  </ol>
-							  <div class="carousel-inner">
-							    <div class="item active">
-							    	
-							      <img src="asset/images/anh2.jpg">
+	<div class="container">
+		<div class="row">
+			<!-- Carousel
+			================================================== -->
+			<div id="myCarousel" class="carousel slide">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="item active">
+			    	
+			      <img src="asset/images/anh2.jpg">
 
-							      <div class="container">
+			      <div class="container">
 
-							        <div class="carousel-caption" >
-							        	
-							        </div>
-							      </div>
-							    </div>
-							    <div class="item">
-							      <img src="asset/images/anh2.jpg">
-							      <div class="container">
-							        <div class="carousel-caption">
-							          
-							        </div>
-							      </div>
-							    </div>
-							    <div class="item">
-							      <img src="asset/images/anh2.jpg">
-							      <div class="container">
-							        <div class="carousel-caption">
-							          
-							        </div>
-							      </div>
-							    </div>
-							  </div>
-							  
-							  <form class="col-lg-12" id="searchForm">
-							   	<div class="row">
-							   		<div class="col-lg-5">
-							   			<input type="text" name="" class="form-control" value="" placeholder="Search">
-							   		</div>
-							   		<div class="col-lg-3">
-							   			<select class="form-control">
-							   				<option>Tất cả ngành</option>
-							   			</select>
-							   		</div>
-							   		<div class="col-lg-2">
-							   			<select class="form-control">
-							   				<option>Địa chỉ</option>
-							   			</select>
-							   		</div>
-							   		<div class="col-lg-2">
-							   			<button type="button" class="btn btn-primary">TÌM KIẾM</button>
-							   		</div>
-							   	</div>
-							  </form>
-							 
-							</div>
-							<!-- /.carousel -->
-					</div>
-					</div>
-				</div>
+			        <div class="carousel-caption" >
+			        	
+			        </div>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="asset/images/anh2.jpg">
+			      <div class="container">
+			        <div class="carousel-caption">
+			          
+			        </div>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="asset/images/anh2.jpg">
+			      <div class="container">
+			        <div class="carousel-caption">
+			          
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			  
+			  <form class="col-lg-12" id="searchForm">
+			   	<div class="row">
+			   		<div class="col-lg-5">
+			   			<input type="text" name="" class="form-control" value="" placeholder="Search">
+			   		</div>
+			   		<div class="col-lg-3">
+			   			<select class="form-control">
+			   				<option>Tất cả ngành</option>
+			   			</select>
+			   		</div>
+			   		<div class="col-lg-2">
+			   			<select class="form-control">
+			   				<option>Địa chỉ</option>
+			   			</select>
+			   		</div>
+			   		<div class="col-lg-2">
+			   			<button type="button" class="btn btn-primary">TÌM KIẾM</button>
+			   		</div>
+			   	</div>
+			  </form>
+			 
+			</div>
+			<!-- /.carousel -->
+	</div>
+	</div>
+</div>
 				<!--HẾT PHẦN BANNER-->
 				<!--BẮT ĐẦU BODY-->
 				<div class="body">

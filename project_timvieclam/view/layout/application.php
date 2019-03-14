@@ -28,7 +28,7 @@
 										if(isset($_SESSION['login']) && $_SESSION['login']==true){
 									?>	
 
-										<li><a>Xin Chào <?php echo ucwords($_SESSION['user']); ?> Đẹp Trai ạ</a></li>
+										<li><a>Xin Chào <?php echo ucwords($_SESSION['name']); ?> Đẹp Trai ạ</a></li>
 										<li><a href="?controller=user&action=logout">Đăng xuất</a></li> 
 									
 									<?php	

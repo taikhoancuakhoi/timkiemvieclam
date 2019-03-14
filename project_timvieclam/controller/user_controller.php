@@ -24,12 +24,13 @@ class UserController extends BaseController{
 			$pass = $_POST['txt_pass'];
 			$user = new User();
 			$data = $user->UserLogin($email,$pass);
-			if ($data == true) {
+			if (is_array($data)) {
 				// cấp session cho user
 				$_SESSION['login'] = true;
-				$_SESSION['email'] = $email;
+				$_SESSION['name'] = $data['ten'];
 
 				header("location:".path."/?controller=job&action=index");
+				
 
 			}else{
 				header("location:".path."/?controller=user&action=login&result=''");
