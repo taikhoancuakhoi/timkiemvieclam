@@ -33,7 +33,7 @@ class UserController extends BaseController{
 				
 
 			}else{
-				header("location:".path."/?controller=user&action=login&result=''");
+				header("location:".path."/?controller=user&action=login&result='sai'");
 			}
 		}else{
 			die("không có post");

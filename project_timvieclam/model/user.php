@@ -7,12 +7,6 @@ class User{
 		$stmt->bindParam(":e",$email);
 		$stmt->bindParam(":p",$pass);
 		$stmt->execute();
-		// $count = $stmt->rowCount();
-		// if ($count == 1) {
-		// 	return true;
-		// }else{
-		// 	return false;
-		// }
 		$count = $stmt->rowCount();
 		if ($count>0) {
 			$row = $stmt->fetch(PDO::FETCH_ASSOC);
