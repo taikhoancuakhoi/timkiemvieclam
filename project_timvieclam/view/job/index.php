@@ -133,7 +133,7 @@
 								</div>
 								<div class="company_fon">
 									<div class="describe1" style="margin-top:20px;padding-top: 10px;"><h4 style="text-align: center;">NHÀ TUYỂN DỤNG HÀNG ĐẦU</h4></div>
-									<hr/>
+									<hr style="width: 359px;margin-left:0px">
 									<div class="company-album">
 										<img src="asset/images/rot2.png">
 										<img src="asset/images/rot2.png">

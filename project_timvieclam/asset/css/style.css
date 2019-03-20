@@ -1,5 +1,7 @@
 .header{
-  background: #6699ff;   
+  background: #6699ff;  
+  height: 80px; 
+  margin-bottom: 0px;
 }
 .menu a{
     text-decoration: none;
@@ -18,13 +20,14 @@
     list-style-type: none;
     float: left;
     margin-left:100px;
+    height: 80px; 
 }
 .menu li a{
-    padding:53px;
-    line-height: 100px;
+    padding:20px 0px 40px 40px ;
+    line-height: 80px;
         
 }
-.menus li{
+.menu li{
         position: relative;
     }
 .menu li select{
@@ -214,42 +217,3 @@
 
 
 
-
-/*====Mid nav===================================================*/
-/*.mid-nav{
-background: #333;
-text-transform: uppercase;
-height:40px; overflow: hidden;
-}
-.mid-nav a{
-color:#E2E2E2;
-padding: 12px 12px 12px 6px;
-display: block; float:left;
-}
-.mid-nav a:hover{
-background: #0572AE;
-text-decoration: none;
-}
-.mid-nav .icon { display: none; }
-/*Mid nav responsive cho màn hình dưới 600px*/
-/*@media screen and (max-width: 600px) {
-.mid-nav{height:auto}
-.mid-nav a:not(:first-child) {display: none;}
-.mid-nav a.icon {
-float: right;
-display: block;
-}
-}
-@media screen and (max-width: 600px) {
-.mid-nav.responsive {position: relative;}
-.mid-nav.responsive a.icon {
-position: absolute;
-right: 0;
-top: 0;
-}
-.mid-nav.responsive a {
-float: none;
-display: block;
-text-align: left;
-}
-}*/
