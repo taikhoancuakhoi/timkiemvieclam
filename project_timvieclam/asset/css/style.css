@@ -4,14 +4,27 @@
 }*/
 .nav{
     background: #6699FF;
+    
+
 }
 
 .header{
        background:#6699FF;
+       display: block;
+       position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+      
     }
 .menu a{
     text-decoration: none;
     color:white;
+
+}
+.menu{
+  
 }
 .menu>li>select>option{
     list-style-type: none;

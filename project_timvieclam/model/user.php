@@ -19,10 +19,36 @@ class User{
 		$sql = "INSERT INTO tb_thanhvien(ten,sdt,email,password) VALUES ('$tentv','$sdt','$email','$pass')";
 		$stmt = DB::getInstance()->prepare($sql);
 		if($stmt->execute()){
-			header("location:".path."/?controller=user&action=checkRegister&success=''");
+			return true;
 		}else{
-			die("Không thể thêm mới thành viên");
+			return false;
 		}
-
-}
+	}
+	public function getJob(){
+		$sql = "SELECT id_nganh,ten_nganh FROM tb_nganh";
+		$stmt = DB::getInstance()->prepare($sql);
+		$stmt->execute();
+		$count = $stmt->rowCount();
+		if ($count>0) {
+			while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+				$result[]=$row;
+			};
+		}
+		return $result;	
+	}
+	public function getCity(){
+		$sql = "SELECT id_thanhpho,ten_tp FROM tb_thanhpho";
+		$stmt = DB::getInstance()->prepare($sql);
+		$stmt->execute();
+		$count = $stmt->rowCount();
+		if ($count>0) {
+			while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+				$result[]=$row;
+			};
+		}
+		return $result;	
+	}
+	// public function postBusiness(){
+	// 	$sql = "INSERT INTO tb_baituyen(tieude,) VALUES ()";
+	// }
 }

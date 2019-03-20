@@ -6,15 +6,29 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/fontawesome.min.css">
    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
  	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="asset/js/checkValidate.js" type="text/javascript">  -->
 	<script src="asset/js/checkValidate.js"></script>
   	<link rel="stylesheet" type="text/css" href="asset/css/style.css">
-
+  	<link rel="stylesheet" href="asset/css/tin.css" type="text/css">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script>
+			$(function(){
+				$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
+				else $(".lentop").fadeOut();
+				});
+				$(".lentop").click(function () {
+				$("body,html").animate({scrollTop: 0}, "slow");
+				});
+				});
+		</script>
 </head>
 <body>
+
 		<div class="nav">
 			<div class="container">
 				<div class="header">
@@ -22,7 +36,7 @@
 						<div class="col-lg-12 col-md-12">
 								<ul class="menu">
 
-									<li><img src="asset/images/logo.png" width="160px"></li>
+									<li><a href="?controller=job&action=index"><img src="asset/images/logo.png" width="170px" height="100px"></a></li>
 									<li><a href="?controller=document&action=index">CẨM NANG</a></li>
 									<?php 
 										if(isset($_SESSION['login']) && $_SESSION['login']==true){

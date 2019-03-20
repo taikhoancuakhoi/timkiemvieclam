@@ -2,7 +2,7 @@
 
 $controllers  = array(
 
-	'user'=>['add','error','login','index','register','checkRegister','checkLogin','logout'],
+	'user'=>['add','error','login','index','register','checkRegister','checkLogin','logout','postBusiness'],
 
 	'job'=>['index','detail','camnang','getJobRandom'],
 
