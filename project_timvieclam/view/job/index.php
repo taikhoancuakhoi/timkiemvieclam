@@ -147,7 +147,7 @@
 									</div>
 								</div>
 								<div class="sidebar">
-									<div class="describe1" style="margin-top:20px"><h4 style="text-align: center; padding-top: 20px">CẨM NANG</h4></div><hr>
+									<div class="describe1" style="margin-top:20px"><h4 style="text-align: center; padding-top: 20px">CẨM NANG</h4></div><hr style="width: 359px;margin-left:0px">
 									<div class="handbook">
 										<div class="hand_1">
 											<img src="asset/images/cn.png" width="140px">
