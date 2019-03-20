@@ -1,6 +1,6 @@
 <div class="banner">
-	<div class="container">
-		<div class="row">
+	<!-- <div class="container"> -->
+		<!-- <div class="row"> -->
 			<!-- Carousel
 			================================================== -->
 			<div id="myCarousel" class="carousel slide">
@@ -15,12 +15,12 @@
 			    	
 			      <img src="asset/images/anh2.jpg">
 
-			      <div class="container">
+			     <!--  <div class="container"> -->
 
 			        <div class="carousel-caption" >
 			        	
 			        </div>
-			      </div>
+			      <!-- </div> -->
 			    </div>
 			    <div class="item">
 			      <img src="asset/images/anh2.jpg">
@@ -63,8 +63,8 @@
 			 
 			</div>
 			<!-- /.carousel -->
-	</div>
-	</div>
+	<!-- </div> -->
+	<!-- </div> --> <!-- container -->
 </div>
 				<!--HẾT PHẦN BANNER-->
 				<!--BẮT ĐẦU BODY-->

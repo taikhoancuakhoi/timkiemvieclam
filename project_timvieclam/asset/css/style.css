@@ -1,23 +1,6 @@
-/**{
-    padding: 0px;
-    margin:0px;
-}*/
-.nav{
-    background: #6699FF;
-    
-
-}
-
 .header{
-       background:#6699FF;
-       display: block;
-       position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-      
-    }
+  background: #6699ff;   
+}
 .menu a{
     text-decoration: none;
     color:white;
@@ -162,10 +145,6 @@
 .carousel-inner img{
         opacity: 0.8;
     filter: alpha(opacity=50);
-}
-hr{
-  border:1px solid black;
-  opacity: 0.5;
 }
 .carousel-caption{
   margin-top: -200px;

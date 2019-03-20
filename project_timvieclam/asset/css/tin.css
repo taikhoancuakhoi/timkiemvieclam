@@ -3,15 +3,14 @@
     margin:0px;
 }
 hr{
-    opacity: 0.1;
+    opacity: 0.05;
     border: 1px solid black;
-    margin-right: 11px;
-    width: 640px;
+    margin-left: 20px;
+    width: 700px;
 }
 .header{
-       background:#6699FF;
-
-    }
+    
+}
 .body{
     background:#EEEEEE;
     height: auto;

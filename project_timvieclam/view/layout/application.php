@@ -30,7 +30,7 @@
 <body>
 
 		<div class="nav">
-			<div class="container">
+		<!-- 	<div class="container"> -->
 				<div class="header">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
@@ -62,12 +62,58 @@
 						
 					</div>
 				</div>
-			</div>
+			<!-- </div> -->	<!-- container -->
+		
 		</div>
-	<div class="container">
+		<!-- <div class="header">
+					<div class="container">
+							<nav class="navbar navbar-inverse" style="height:60px;background: #6699FF;border:0px;">
+							  <div class="container-fluid">
+							    <div class="navbar-header">
+							      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span> 
+							      </button>
+							      <a class="navbar-brand" href="#" style="margin-top: -13px;"><img src="images/logo.png" width="160px"></a>
+							    </div>
+							   	<div class="collapse navbar-collapse" id="myNavbar">
+							      	<ul class="nav navbar-nav" style="margin-top: 20px;">
+								        
+								        <li><a href="#" style="color: white;margin-left: 80px;">CẨM NANG</a></li>
+								        <?php 
+										if(isset($_SESSION['login']) && $_SESSION['login']==true){
+										?>	
+
+										<li><a>Xin Chào <?php echo ucwords($_SESSION['name']); ?> Đẹp Trai ạ</a></li>
+										<li><a href="?controller=user&action=logout">Đăng xuất</a></li> 
+									
+										<?php	
+										}else{
+										?>
+								        <li><a href="#" style="color: white;margin-left: 89px;">ĐĂNG KÝ</a></li> 
+								        <li><a href="?controller=user&action=login" style="color: white;margin-left: 90px;">ĐĂNG NHẬP</a></li> 
+								       	<?php } ?>
+								        <li class="dropdown">
+									        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white;background: #6699FF;margin-left: 90px;">TÀI KHOẢN
+									        <span class="caret"></span></a>
+									        <ul class="dropdown dropdown-menu" style="border-radius: 8px;">
+									          <li><a href="#" style="color: black;">NHÀ TUYỂN DỤNG</a></li>
+									          <li><a href="#" style="color: black">THÀNH VIÊN</a></li>
+									          
+									        </ul>
+									      </li>
+							      	</ul>
+							      
+							    </div>
+							  </div>
+							</nav>
+							
+					</div> -->
+	<!-- <div class="container"> -->
 
 	<?= @$content ?>
-	</div>
+	<!-- </div> -->
 
 
 	<div class="footer">
