@@ -215,5 +215,54 @@
   }
 }
 
+/*trang detail job
+*/
 
+.detail{
+  background-color: white;
+  height: auto;
+  
+}
+.job{
+  padding: 0px 5px 5px 10px;
+}
+.jobnew{
+  background-color: white;
+  height: auto;
+  margin-top: -10px;
+  padding-bottom: 20px;
+  
+}
+.name-job{
+  float:left;
+  
+}
+.describe{
+  margin-left: 20px;
+  
+}
 
+.click{
+  margin-top: -68px;
+  margin-left: 49px;
+}
+.btn.btn-grey-bor{
+    background-color: #fafafa;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e0e0e0;
+    padding: 0px 13px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+    display: inline-block;
+    color: #757575;
+}
+.pass{
+  
+  margin-top: 37px;
+}
+.min{
+    
+  background-color: white;
+}

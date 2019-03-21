@@ -2,18 +2,19 @@
     padding: 0px;
     margin:0px;
 }
-hr{
-    opacity: 0.05;
-    border: 1px solid black;
-    margin-left: 20px;
-    width: 700px;
-}
+
 .header{
-    
-}
+       background:#6699FF;
+
+    }
 .body{
     background:#EEEEEE;
     height: auto;
+}
+.footer{
+    background:#477ba3;
+    height: auto;
+
 }
 .function a{
     color: white;
@@ -76,7 +77,42 @@ hr{
 }
 .tab{
     margin-left:20px;
-    padding: 20px 0px 20px 25px;  
+}
+/*.request p{
+    padding-top: 20px;
+}
+.description p{
+    padding-top:9px;
+}
+#tp{
+    height: 34px;
+    width: 200px;
+}
+#quan{
+    height: 34px;
+    width: 207px;
+}*/
+.hotline{
+    
+    background: white;
+}
+.company-album img{
+    padding: 5px;
+}
+.company-images img{
+  padding-top: 5px;
+}
+.font .container{
+    background: white;
+}
+.nav-footer{
+   
+    height:150px;
+    background: white;
+}
+.border{
+    padding: 10px;
+    background: white;
 }
 .dot{
     background-color: white;
@@ -88,7 +124,7 @@ hr{
 }
 .conspan>ul{
     list-style-type: none;
-    margin-top: -20px;
+
 }
 .conspan ul li a{
     float: left;
@@ -108,3 +144,108 @@ hr{
 .lentop {display:none; bottom: 40%; right: 10px; cursor: pointer;  position: fixed; z-index: 1000;}
 .lentop div {background:black; border:2px solid #DDDDDD; border-radius:45px; padding:11px 12.5px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)}
 .lentop img {width:16px; height:16px;}
+.carousel-inner img{
+        opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+hr{
+  border:1px solid black;
+  opacity: 0.5;
+}
+.carousel-caption{
+  margin-top: -200px;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.carousel {
+  margin-bottom: 20px;
+}
+.hand_2{
+    margin-left: 200px;
+    margin-top:-106px;
+}
+.sidebar{
+    background: white;
+}
+.company_fon{
+    background: white;
+}
+
+/*.carousel-caption {
+  z-index: 10;
+}*/
+
+.carousel .item {
+  height: 450px;
+  background-color:#bbb;
+  overflow:hidden;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+#searchForm {
+    position:absolute;
+    top:60%;
+    left: 30px;
+    
+}
+#searchForm input{
+    height: 40px;
+}
+#searchForm select{
+    height: 40px;
+}
+#searchForm button{
+    height: 40px;
+    width:auto;
+}
+.describe{
+  padding: 3px;
+}
+
+/* PHÂN TRANG */
+.register_content{
+    margin: 40px 0px 40px 0px;
+}
+.button{
+    height: 260px;
+    width: 470px;
+    border: 1px solid black;
+    padding: 15px;
+}
+.circle{
+    height: 45%;
+  width:31%;
+  background-color: #1790d4;
+  border-radius: 50%;
+  display: inline-block;
+}
+.circle i{
+    font-size:63px;
+    margin-left:46px;
+    margin-top:19px;
+    color:white; 
+}
+.text{
+    float: right;
+    margin-right: 9px;
+}
+.text a{
+    text-decoration: none;
+    color:#1790d4;
+    font-size: 20px;
+}
+.text i{
+    color: green;
+}
+.put{
+    margin-top: 35px;
+    margin-left:193px; 
+}

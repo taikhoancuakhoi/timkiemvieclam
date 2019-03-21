@@ -36,7 +36,7 @@
 						<div class="col-lg-12 col-md-12">
 								<ul class="menu">
 
-									<li><a href="?controller=job&action=index"><img src="asset/images/logo.png" width="170px" height="100px"></a></li>
+									<li style="margin-top:-10px"><a href="?controller=job&action=index"><img src="asset/images/logo.png" width="170px" height="100px"></a></li>
 									<li><a href="?controller=document&action=index">CẨM NANG</a></li>
 									<?php 
 										if(isset($_SESSION['login']) && $_SESSION['login']==true){
@@ -49,7 +49,7 @@
 									}else{
 									?>
 
-									<li><a href="?controller=user&action=register">ĐĂNG KÝ</a></li>
+									<li><a href="?controller=user&action=chooseRegister">ĐĂNG KÝ</a></li>
 									<li><a href="?controller=user&action=login">ĐĂNG NHẬP</a></li>
 									
 										

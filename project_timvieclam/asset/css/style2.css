@@ -1,0 +1,72 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+.header{
+       background:#6699FF;
+    }
+.body{
+    background:#EEEEEE;
+}
+.footer{
+    background:#477ba3;
+    height: auto;
+
+}
+.function a{
+    color: white;
+    text-decoration: none;
+}
+.function a{
+    color:white;
+}
+.function i{
+	color: white;
+}
+.detail{
+	background-color: white;
+	height: auto;
+	
+}
+.jobnew{
+	background-color: white;
+	height: auto;
+	margin-top: -10px;
+	
+}
+.name-job{
+	float:right;
+	position: relative;
+	right: 240px;
+}
+.describe{
+	margin-left: 20px;
+	
+}
+
+.click{
+	
+	margin-right: 20px;
+}
+.btn.btn-grey-bor{
+    background-color: #fafafa;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e0e0e0;
+    padding: 0px 13px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+    display: inline-block;
+    color: #757575;
+}
+.pass{
+	
+	margin-top: 37px;
+}
+.min{
+		
+	background-color: white;
+}
+/**/

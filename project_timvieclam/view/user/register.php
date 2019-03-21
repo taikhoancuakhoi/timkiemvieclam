@@ -1,66 +1,43 @@
-	<div class="row">
-						<div class="col-lg-2"></div>
-						<div class="col-lg-8">
-							<div class="login">
-								<div class="page-header" style="text-align: center;font-size:27px;font-family: both;">ĐĂNG KÝ THÀNH VIÊN</div>
-								<form action="?controller=user&action=checkRegister" method="post" onsubmit="return checkValidate();">
-            <table class="table table-hover table-responsive table-bordered">
-            	 <tr>
-                    <th>Họ Tên</th>
-                    <td>
-                        <input type="text" name="txt_name" id="txtUser" class="form-control">
-                    </td>
-                    <td>
-                        <span id="lbUser" class="msg"></span>
-                    </td>
-                </tr>
-            	 <tr>
-                    <th>Email</th>
-                    <td>
-                        <input type="text" name="txt_email" id="txtEmail" class="form-control">
-                    </td>
-                    <td>
-                        <span id="lbEmail" class="msg"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Mật khẩu</th>
-                    <td>
-                        <input type="password" name="txt_pass" id="txtPass" class="form-control">
-                    </td>
-                    <td>
-                        <span id="lbPass" class="msg"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Nhập lại mật khẩu</th>
-                    <td>
-                        <input type="password" name="txt_passreset" id="txtPassreset" class="form-control">
-                    </td>
-                    <td>
-                        <span id="lbPassreset" class="msg"></span>
-                    </td>
-                </tr>
-               
-                <tr>
-                    <th>Số điện thoại</th>
-                    <td>
-                        <input type="text" name="txt_mobile" id="txtMobile" class="form-control">
-                    </td>
-                    <td>
-                        <span id="lbMobile" class="msg"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <td>
-                        <input type="submit" name="btnReg" id="btnReg" value="Đăng ký" class="btn btn-success form-control">
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
-        </form>
-							</div>
-						</div>
-						<div class="col-lg-2"></div>
-					</div>
+<div class="container">
+                    <div class="row register_content">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-5">
+                            <div class="left">
+                                <div class="button">
+                                    <div class="circle">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="#">ĐĂNG KÝ THÀNH VIÊN</a></h4>
+                                        <p><i class="fas fa-check" ></i> Công việc phù hợp nhanh chóng</p>
+                                        <p><i class="fas fa-check" ></i> Ứng tuyển công việc MIỄN PHÍ</p>
+                                        <p><i class="fas fa-check" ></i> Hiển thị thông tin hồ sơ với nhà tuyển dụng </p>
+                                    </div>
+                                    <div class="put">
+                                        <button type="button" class="btn btn-primary">Đăng ký thành viên</button>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="right">
+                                <div class="button">
+                                        <div class="circle" style="background: #fc205c;">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="#">ĐĂNG KÝ NHÀ TUYỂN DỤNG</a></h4>
+                                        <p><i class="fas fa-check" ></i> Nhiều ứng viên tiếp cận thông tin</p>
+                                        <p><i class="fas fa-check" ></i> Không giới hạn tương tác với ứng viên</p>
+                                        <p><i class="fas fa-check" ></i> Quảng cáo với lượt xem follow từ ứng viên</p>
+                                    </div>
+                                    <div class="put">
+                                        <button type="button" class="btn btn-danger" style="background: #ff4949;">Đăng ký nhà tuyển dụng</button>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>

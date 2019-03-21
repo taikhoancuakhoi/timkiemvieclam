@@ -51,8 +51,11 @@ class UserController extends BaseController{
 		header("location:".path."/?controller=job&action=index");
 	}
 
-	public function register(){
+	public function chooseRegister(){
 		$this->render("register");	
+	}
+	public function userRegister(){
+		$this->render('userRegister');
 		if (isset($_GET['register']) && $_GET['register'] == 'false') {
 			echo "<script type='text/javascript'>alert('Trùng tài khoản, hoặc gì gì đấy');</script>'";
 		}

@@ -15,7 +15,10 @@ class User{
 			return false;
 		}
 	}
-	public function Register($tentv,$sdt,$email,$pass){
+	public function Register(){
+		$this->render("register");
+	}
+	public function userRegister($tentv,$sdt,$email,$pass){
 		$sql = "INSERT INTO tb_thanhvien(ten,sdt,email,password) VALUES ('$tentv','$sdt','$email','$pass')";
 		$stmt = DB::getInstance()->prepare($sql);
 		if($stmt->execute()){

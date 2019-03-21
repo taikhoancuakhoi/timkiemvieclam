@@ -15,7 +15,9 @@ class JobController extends BaseController{
 	}
 	//trang thông tin chi tiết
 	public function detail(){
-		$this->render("detail");
+		$jobDetail = new Job();
+		$data = $jobDetail->getJobDetail($_GET['id']);
+		$this->render("detail",$data);
 	}
 	
 }

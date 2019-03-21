@@ -91,7 +91,7 @@
 									</div>
 									<div class="col-lg-5">
 										<div class="company-text">
-											<p><span style="font-weight: bold;font-size:20px;"><a href="?controller=job&action=detail"><?php echo ucwords($value['tieude']); ?></a></span></p>
+											<p><span style="font-weight: bold;font-size:20px;"><a href="?controller=job&action=detail&id=<?php echo $value['id_baituyen'] ?>"><?php echo ucwords($value['tieude']); ?></a></span></p>
 											<p><span style="font-style: italic;"><a  href="#"><?php echo ucwords($value['ten']); ?></a></span></p>
 											
 											
@@ -158,7 +158,7 @@
 											<img src="asset/images/cn.png" width="140px">
 											<p style="font-size:13px;">Cái giá của ... Thất nghiệp</p>
 										</div>
-										<p><a href="#" class="" style=""><button type="button" class="btn btn-success" style="background-color:#477ba3;margin:10px 130px">Xem thêm</button></a></p>
+										<p><a href="?controller=document&action=index" class="" style=""><button type="button" class="btn btn-success" style="background-color:#477ba3;margin:10px 130px">Xem thêm</button></a></p>
 									</div>
 								</div>
 							</div>
