@@ -7,7 +7,6 @@
 				<img src="è.jpg" alt="">
 			</div>
 			<p>Name</p>
-			<p><a href="#"><input type="submit" name="" value="Hoàn thiện hồ sơ"></a></p>
 				<ul>
 					<li><a href="#">Quản lý chung</a></li>
 					<li><a href="#">Quản lý hồ sơ</a></li>
@@ -28,7 +27,7 @@
 					</li>
 					<li>
 						<ul>
-							<li>Thông tin cá nhân</li>
+							<li>Quản lý tài khoản</li>
 							<li><a href="thay-doi-mat-khau.html">Thay đổi mật khẩu</li>
 						</ul>
 					</li>
