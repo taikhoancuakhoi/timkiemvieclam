@@ -567,15 +567,16 @@
   border: 1px solid black;
   height: 500px;
   width: 240px;
+  padding-left: 60px;
 }
 .user-left-information a{
   text-decoration: none;
 }
 .user-right-information{
   float: right;
-  border:1px solid black;
-  margin-right:100px;  
-  width:1000px;
+  border:1px solid #ccc;
+  margin-right:70px;  
+  width:993px;
   height: 500px;
 }
 .user-right-information li{
