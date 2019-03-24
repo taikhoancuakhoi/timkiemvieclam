@@ -25,16 +25,15 @@ class UserController extends BaseController{
 
 	public function checkLogin(){
 		
-		if(isset($_POST['txt_email'])){
-			$email = $_POST['txt_email'];
+		if(isset($_POST['txt_nametk'])){
+			$tentk = $_POST['txt_nametk'];
 			$pass = $_POST['txt_pass'];
 			$user = new User();
-			$data = $user->UserLogin($email,$pass);
+			$data = $user->UserLogin($tentk,$pass);
 			if (is_array($data)) {
 				// cấp session cho user
 				$_SESSION['login'] = true;
-				$_SESSION['name'] = $data['ten'];
-
+				$_SESSION['quyen'] = $data['id_loaitk'];
 				header("location:".path."/?controller=job&action=index");
 				
 
@@ -46,42 +45,89 @@ class UserController extends BaseController{
 		}
 		
 	}
-	public function logout(){
-		unset($_SESSION['login']);
-		header("location:".path."/?controller=job&action=index");
-	}
 
 	public function chooseRegister(){
 		$this->render("register");	
 	}
 	public function userRegister(){
 		$this->render('userRegister');
+
+		
 		if (isset($_GET['register']) && $_GET['register'] == 'false') {
 			echo "<script type='text/javascript'>alert('Trùng tài khoản, hoặc gì gì đấy');</script>'";
 		}
 	}
-	public function checkRegister(){
+	
+	public function checkUserRegister(){
 		if (isset($_POST['txt_name'])) {
 			$ten = $_POST['txt_name'];
 			$email = $_POST['txt_email'];
+			$tentk = $_POST['txt_tk'];
 			$pass = $_POST['txt_pass'];
 			$sdt = $_POST['txt_mobile'];
-			$user = new User();
-			$result = $user->Register($ten,$sdt,$email,$pass);
-			if ($result == true) {
-				header("location:".path."/?controller=user&action=login&register=true");
-			}else{
-				header("location:".path."/?controller=user&action=register&register=false");
+			$taikhoan = $_POST['txt_loaitk'];
+			if ($taikhoan == 2) {
+
+				$user = new User();
+				
+				$data = $user->accountRegister($tentk,$pass,$taikhoan);
+				$result = $user->userRegister($ten,$sdt,$email,$data);
+				if ($result == true) {
+					header("location:".path."?controller=user&action=login&register=true");
+
+				}else{
+					header("location:".path."?controller=page&action=error");
+				}
 			}
 		}
 	}
+	public function businessRegister(){
+		$this->render('businessRegister');
+	}
+	public function checkBusinessRegister(){
+		if (isset($_POST['txt_tenntd'])) {
+			$ten = $_POST['txt_tenntd'];
+			$email = $_POST['txt_email'];
+			$taikhoan = $_POST['txt_tentk'];
+			$pass = $_POST['txt_pass'];
+			$sdt = $_POST['txt_sdt'];
+			$diachi = $_POST['txt_diachi'];
+			$quyen = $_POST['txt_loaitk'];
 
-	public function postBusiness(){
+			if ($quyen == '3') {
+				$user = new User();
+				$data = $user->accountRegister($ten,$pass,$quyen);
+				$result = $user->businessRegister($ten,$sdt,$email,$diachi,$data);
+				if ($result == true) {
+					header("location:".path."?controller=user&action=login&register=true");
+				}
+			}
+		}else{
+			header("location:".path."?controller=page&action=error");
+		}
 		
-		$userJob = new User();
-		$data = $userJob->getJob();
-		$this->render('postBusiness',$data);
-		// $city = $userJob->getCity(); 
-		
+	}	
+	
+
+	// chức năng đăng xuất 
+	public function logout(){
+		unset($_SESSION['login']);
+		header("location:".path."/?controller=job&action=index");
+	}
+
+	public function userProfile(){
+		$this->render('user_profile');
+	}
+	public function businessProfile(){
+		$this->render('business_profile');
+	}
+	public function indexAdmin(){
+		$this->render('index_admin');
 	}
 }
+
+
+
+// non hạy nhon tum non khóc vì tum
+// lái cháy lừa dối tình cảm
+// khọp chay cảm ơn

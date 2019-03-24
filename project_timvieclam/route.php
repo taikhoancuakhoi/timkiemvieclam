@@ -2,9 +2,9 @@
 
 $controllers  = array(
 
-	'user'=>['add','error','login','index','chooseRegister','register','userRegister','buRegister','checkRegister','checkLogin','logout','postBusiness'],
+	'user'=>['add','error','login','index','chooseRegister','businessRegister','checkBusinessRegister','userRegister','checkUserRegister','checkLogin','userProfile','businessProfile','indexAdmin','logout','postBusiness'],
 
-	'job'=>['index','detail','camnang','getJobRandom'],
+	'job'=>['index','detail','camnang','jobSearch','getJobRandom'],
 
 	'page'=>['error'],
 	'document'=>['index']

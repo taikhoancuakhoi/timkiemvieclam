@@ -1,3 +1,6 @@
+.nav{
+    background: #6699FF;
+}
 .header{
   background: #6699ff;  
   height: 80px; 
@@ -233,10 +236,6 @@
   padding-bottom: 20px;
   
 }
-.name-job{
-  float:left;
-  
-}
 .describe{
   margin-left: 20px;
   
@@ -265,4 +264,352 @@
 .min{
     
   background-color: white;
+}
+
+.brand{
+  border: 1px solid black;
+  float: left;
+  width: 280px;
+  height: 800px;
+  /*background: #6699FF;*/
+}
+
+.name-admin{
+  float: right;
+  margin-right:58px;
+  position: relative;
+  bottom: 30px;
+  font-weight: bold;
+  font-size:18px;
+
+}
+.menu-case {
+  width: 200px;
+} 
+ 
+.menu-case li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 260px;
+  padding-top: 24px;
+  font-size: 16px;
+  margin-left: 20px;
+  color: blue;
+  font-weight: bold;
+}
+
+.menu-case a:hover {
+  font-size:19px;
+  transition:0.2s;
+  border-radius: 10px;
+  color: #337ab7;
+}
+.dropdown-menu>li>a{
+  font-size: 15px;
+}
+/*---------------nút search cho admin---------=========================*/
+.menu-case input#search{
+  width: 270px;
+  height: 40px;
+  background: #FFFFCC;
+  border: none;
+  margin-left: 5px;
+  float: left;
+  color: #262626;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+ 
+   
+    -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
+}
+.icon{
+  position: absolute;
+  top:13.1%;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: black;
+}
+
+
+
+
+/*===========phân các trang trong mục admin=============================*/
+.comment{
+  float: right;
+/*display: block;*/
+  margin-right:10px;
+
+}
+/*==================phần chi tiết trong các phần admin sửa===================*/
+.card-body th{
+  width: 80px;
+}
+.card-body td{
+  width: 80px; 
+  font-size: 13.2px;
+
+}
+.card-body{
+  margin-top: 10px;
+  margin-right:20px;
+}
+.card-body1 td{
+  width: 200px;
+  font-size: 14px;
+}
+.card-body1{
+  width: 640px;
+}
+/*================================phần edit=====================*/
+.card-body2{
+  width: 500px;
+  margin-top: 20px;
+}
+/*==================Phần editarticles==================================*/
+.card-body3{
+  width: 1050px;
+  margin-top: 20px;
+}
+/*=======================phần displayarticles=========================*/
+.card-body4{
+  
+  margin-top: 20px;
+}
+.card-body4 td {
+  width: 980px;
+}
+/*=================phần postuser=============*/
+.card-body5{
+    width: 1050px;
+}
+
+
+
+/*================test lên tôp========================================*/
+.lentop {display:none; bottom: 40%; right: 10px; cursor: pointer;  position: fixed; z-index: 1000;}
+.lentop div {background:black; border:2px solid #DDDDDD; border-radius:45px; padding:11px 12.5px; box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3)}
+.lentop img {width:16px; height:16px;}
+.carousel-inner img{
+        opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+
+
+
+
+/*===============từ tin.css sang style.css==============================*/
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+
+
+.detail{
+    background-color: white;
+    height: auto;
+    
+}
+.jobnew{
+    background-color: white;
+    height: auto;
+    margin-top: -10px;
+    
+}
+.name-job{
+    float:right;
+    position: relative;
+    right: 240px;
+}
+
+
+.click{
+    
+    margin-right: 20px;
+}
+.btn.btn-grey-bor{
+    background-color: #fafafa;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e0e0e0;
+    padding: 0px 13px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+    display: inline-block;
+    color: #757575;
+}
+.pass{
+    
+    margin-top: 37px;
+}
+.min{
+        
+    background-color: white;
+}
+/**/
+.main{
+    background-color: white;
+}
+.tab{
+    margin-left:20px;
+}
+
+
+
+.dot{
+    background-color: white;
+
+}
+.navbar{
+    background-color: white;
+    
+}
+.conspan>ul{
+    list-style-type: none;
+
+}
+.conspan ul li a{
+    float: left;
+    padding-left:50px;
+}
+.conspan a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 15px;
+}
+.conspan>i{
+    float: right;
+    margin-right:20px;
+}
+
+
+/* PHÂN TRANG */
+.button{
+    height: 260px;
+    width: 470px;
+    border: 1px solid black;
+}
+.circle{
+    height: 45%;
+  width:31%;
+  background-color: #1790d4;
+  border-radius: 50%;
+  display: inline-block;
+}
+.circle i{
+    font-size:63px;
+    margin-left:46px;
+    margin-top:19px;
+    color:white; 
+}
+.text{
+    float: right;
+    margin-right: 9px;
+}
+.text a{
+    text-decoration: none;
+    color:#1790d4;
+    font-size: 20px;
+}
+.text i{
+    color: green;
+}
+.put{
+    margin-top: 35px;
+    margin-left:193px; 
+}
+/*================================================SỬa trang login================*/
+.login{
+  /*margin-left: 180px;*/
+  /*background: white;
+  width: 450px;
+  border-radius: 4px;
+  height: 250px;*/
+}
+.login{
+  margin: auto;
+  width: 440px;
+  background: white;  
+}
+.tb_thanhvien tr td{
+  padding:25px 0px 0px 10px;
+}
+#txt_dn{
+  width: 300px;
+}
+/*=====================Ttrang index giành cho nhà tuyển dụng========*/
+.menleft{
+  border: 1px solid black;
+  width: 260px;
+  height: 608px;
+  display: block;
+}
+.menu-down li{
+  padding-top: 20px;
+  transition: border-color .3s,background-color .3s,color .3s;
+  box-sizing: border-box;
+    white-space: nowrap;
+}
+/*=================trang cá nhân==============*/
+.user-left-information{
+  float: left;
+  border: 1px solid black;
+  height: 500px;
+  width: 240px;
+}
+.user-left-information a{
+  text-decoration: none;
+}
+.user-right-information{
+  float: right;
+  border:1px solid black;
+  margin-right:100px;  
+  width:1000px;
+  height: 500px;
+}
+.user-right-information li{
+  list-style-type: none;
+}
+.user-right-information a{
+  text-decoration: none; 
+}
+.box-menu{
+
+}
+/*=============trang doanh nghiệp========*/
+.enterprise-left-information{
+  float: left;
+  border: 1px solid black;
+  height: 500px;
+  width: 240px;
+}
+.enterprise-left-information a{
+  text-decoration: none;
+}
+.enterprise-left-information li{
+  list-style-type: none;
+}
+.enterprise-right-information{
+  float: right;
+  border:1px solid black;
+  margin-right:100px;  
+  width:1000px;
+  height: 500px;
+}
+.enterprise-right-information a{
+  text-decoration:none;
+}
+.enterprise-right-information li{
+  list-style-type: none;
 }

@@ -15,6 +15,7 @@
   	<link rel="stylesheet" type="text/css" href="asset/css/style.css">
   	<link rel="stylesheet" href="asset/css/tin.css" type="text/css">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="text/css" href="asset/css/style2.css">
 		<script>
 			$(function(){
 				$(window).scroll(function () {
@@ -40,12 +41,26 @@
 									<li><a href="?controller=document&action=index">CẨM NANG</a></li>
 									<?php 
 										if(isset($_SESSION['login']) && $_SESSION['login']==true){
+											if (isset($_SESSION['quyen']) && $_SESSION['quyen']=='3') {
+											
+											
 									?>	
-
-										<li><a>Xin Chào <?php echo ucwords($_SESSION['name']); ?> Đẹp Trai ạ</a></li>
-										<li><a href="?controller=user&action=logout">Đăng xuất</a></li> 
-									
+										<li><a href="?controller=user&action=businessProfile">Quản Lý DN</a></li>
+										 
+										
 									<?php	
+										}else if(isset($_SESSION['quyen']) && $_SESSION['quyen']=='2'){
+											
+									?>
+										<li><a href="?controller=user&action=userProfile">Quản Lý NTV</a></li>
+									<?php 
+										}else if(isset($_SESSION['quyen']) && $_SESSION['quyen']='1'){
+											header("location:".path."?controller=user&action=indexAdmin");
+										}
+									 ?>
+										<li><a href="?controller=user&action=logout">Đăng xuất</a></li>
+									<?php
+										
 									}else{
 									?>
 

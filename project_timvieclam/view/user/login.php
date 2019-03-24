@@ -1,8 +1,4 @@
-<?php 
-	if (isset($_POST['txt_checkbox'])) {
-		#
-	}
- ?>
+
 
 <div class="row">
 	<div class="col-lg-2"></div>
@@ -17,7 +13,7 @@
 
 					<tr>
 						<td>Họ tên</td>
-						<td><input type="text" name="txt_email" placeholder="Điền thông tin đăng nhập" class="form-control"></td>
+						<td><input type="text" name="txt_nametk" placeholder="Điền thông tin đăng nhập" class="form-control"></td>
 					</tr>
 					<tr>
 						<td>Password</td>

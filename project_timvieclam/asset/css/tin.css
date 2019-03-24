@@ -38,9 +38,8 @@
     
 }
 .name-job{
-    float:right;
-    position: relative;
-    right: 240px;
+    float:left;
+    
 }
 .describe{
     margin-left: 20px;
@@ -56,7 +55,8 @@
     height: 38px;
     line-height: 38px;
     border: 1px solid #e0e0e0;
-    padding: 0px 13px;
+    padding: 0px 14px;
+    margin-top: -20px;
     cursor: pointer;
     border-radius: 2px;
     font-size: 14px;
@@ -221,7 +221,7 @@ hr{
     padding: 15px;
 }
 .circle{
-    height: 45%;
+    height: 55%;
   width:31%;
   background-color: #1790d4;
   border-radius: 50%;
@@ -229,8 +229,8 @@ hr{
 }
 .circle i{
     font-size:63px;
-    margin-left:46px;
-    margin-top:19px;
+    margin-left:43px;
+    margin-top:21px;
     color:white; 
 }
 .text{

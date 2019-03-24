@@ -1,4 +1,6 @@
 <div class="banner">
+	<!-- <div class="container"> -->
+		<!-- <div class="row"> -->
 			<!-- Carousel
 			================================================== -->
 			<div id="myCarousel" class="carousel slide">
@@ -13,12 +15,10 @@
 			    	
 			      <img src="asset/images/anh2.jpg">
 
-			     <!--  <div class="container"> -->
-
 			        <div class="carousel-caption" >
 			        	
 			        </div>
-			      <!-- </div> -->
+			    
 			    </div>
 			    <div class="item">
 			      <img src="asset/images/anh2.jpg">
@@ -37,8 +37,6 @@
 			      </div>
 			    </div>
 			  </div>
-			<!--   <?php echo "<pre>";
-			   				print_r($data); ?> -->
 			  <form method="POST" action='?controller=job&action=jobSearch' class="col-lg-12" id="searchForm">
 			   	<div class="row">
 			   		<div class="col-lg-5">
@@ -46,7 +44,8 @@
 			   		</div>
 			   		<div class="col-lg-3">
 			   			<select class="form-control" name="txt_nganh">
-			   				<option value="">Tất cả ngành</option>
+			   				<option value="">Tất Cả Ngành</option>
+			   				
 			   				<?php 
 
 			   					foreach ($data['nganh'] as $key => $value) {
@@ -97,7 +96,7 @@
 
 								 ?>
 								<div class="row">
-		
+
 									<div class="col-lg-3">
 											<div class="company-images">
 													<img src="<?php echo $value['img'] ?>" width="140px" height='80px'>
@@ -106,15 +105,13 @@
 									</div>
 									<div class="col-lg-5">
 										<div class="company-text">
-											<p><span style="font-weight: bold;font-size:20px;"><a href="?controller=job&action=detail&id=<?php echo $value['id_baituyen'] ?>"><?php echo ucwords($value['tieude']); ?></a></span>
-											</p>
+											<p><span style="font-weight: bold;font-size:20px;"><a href="?controller=job&action=detail&id=<?php echo $value['id_baituyen'] ?>"><?php echo ucwords($value['tieude']); ?></a></span></p>
 											<p>
 												<span style="font-weight:bold;color:#337ab7;">
 												Ngành: </span>
 												<a  href="#"><?php echo ucwords($value['ten_nganh']); ?></a>
 											</p>
-											<p><span style="font-style: italic;"><a  href="#"><?php echo ucwords($value['ten']); ?></a></span>
-											</p>
+											<p><span style="font-style: italic;"><a  href="#"><?php echo ucwords($value['ten']); ?></a></span></p>
 											
 											
 										</div>

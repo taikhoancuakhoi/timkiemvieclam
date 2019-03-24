@@ -1,14 +1,14 @@
-	<div class="row">
-						<div class="col-lg-2"></div>
-						<div class="col-lg-8">
-							<div class="login">
-								<div class="page-header" style="text-align: center;font-size:27px;font-family: both;">ĐĂNG KÝ THÀNH VIÊN</div>
-								<form action="?controller=user&action=checkUserRegister" method="post" onsubmit="return checkValidate();">
+    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <div class="login">
+                                <div class="page-header" style="text-align: center;font-size:27px;font-family: both;">ĐĂNG KÝ NHÀ TUYỂN DỤNG</div>
+                                <form action="?controller=user&action=checkBusinessRegister" method="post" onsubmit="return checkValidate();">
             <table class="table table-hover table-responsive table-bordered">
-            	 <tr>
-                    <th>Họ Tên</th>
+                 <tr>
+                    <th>Tên nhà tuyển dụng</th>
                     <td>
-                        <input type="text" name="txt_name" id="txtUser" class="form-control">
+                        <input type="text" name="txt_tenntd" id="txt_email" class="form-control">
                     </td>
                     <td>
                         <span id="lbUser" class="msg"></span>
@@ -17,14 +17,14 @@
                  <tr>
                     <th>Tên tài khoản</th>
                     <td>
-                        <input type="text" name="txt_tk" id="txt_tk" class="form-control">
+                        <input type="text" name="txt_tentk" id="txt_tk" class="form-control">
                     </td>
                     <td>
                         <span id="lbTentk" class="msg"></span>
                     </td>
                 </tr>
-            	 <tr>
-                    <th>Email</th>
+                 <tr>
+                    <th>Email Liên Hệ</th>
                     <td>
                         <input type="text" name="txt_email" id="txtEmail" class="form-control">
                     </td>
@@ -50,11 +50,19 @@
                         <span id="lbPassreset" class="msg"></span>
                     </td>
                 </tr>
-               
-                <tr>
-                    <th>Số điện thoại</th>
+                 <tr>
+                    <th>Địa Chỉ</th>
                     <td>
-                        <input type="text" name="txt_mobile" id="txtMobile" class="form-control">
+                        <input type="text" name="txt_diachi" class="form-control">
+                    </td>
+                    <td>
+                        <span id="" class="msg"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Số điện thoại liên hệ</th>
+                    <td>
+                        <input type="text" name="txt_sdt" id="txtMobile" class="form-control">
                     </td>
                     <td>
                         <span id="lbMobile" class="msg"></span>
@@ -63,8 +71,8 @@
                 <tr>
                     <th>Thành Viên</th>
                     <td>
-                        <select name="txt_loaitk" id="" >
-                            <option value="<?php echo $_GET['tk']; ?>">Người Tìm Việc</option>
+                        <select name="txt_loaitk" id="">
+                            <option value="<?php echo $_GET['tk']; ?>">Nhà Tuyển Dụng</option>
                         </select>
                     </td>
                     <td>
@@ -81,7 +89,7 @@
 
             </table>
         </form>
-							</div>
-						</div>
-						<div class="col-lg-2"></div>
-					</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>

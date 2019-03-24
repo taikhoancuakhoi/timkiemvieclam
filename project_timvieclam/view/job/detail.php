@@ -13,12 +13,13 @@
 									<p><h3><?php echo $data['tieude']; ?></h3></p>
 									<a href="#" style="color: black;"><?php echo ucwords($data['ten']); ?></a>
 								</div>
-								<p style="float: right;margin:22px 10px;"><b>Ngày Cập Nhật:</b> <?php echo $data['ngaydang']; ?></p>
-								<div style="clear: both;"></div>
-								<p style="float: right;margin:-58px 120px 50px 0px;"><a class="btn btn-grey-bor marginRight10 btn-luu-vl hidden-xs save-job-track" id="save-job" data-id="1247433" onclick="bookmarkDetail(1247433)">
+								<div style="clear: both"></div>
+								<a class="btn btn-grey-bor marginRight10 btn-luu-vl hidden-xs save-job-track" id="save-job" style="margin:0px 33px" onclick="bookmarkDetail(1247433)">
                                 		<i class="far fa-star"></i> Lưu việc làm
-                            			</a></p>
-                            			<div style="clear: both;"></div>
+                            	</a>
+								<p style="float: left;margin:30px 300px;"><b>Ngày Cập Nhật:</b> <?php echo $data['ngaydang']; ?></p>
+								
+                            	<div style="clear: both;"></div>
 							</div>
 							<p style="font-size:17px;color:#FF6633;text-align: center;">THÔNG TIN TUYỂN DỤNG</p>
 							<div class="row">
@@ -44,7 +45,6 @@
 								<div class="col-lg-6 right">
 									
 									<div class="click">
-										<!-- <input type="submut" name="" value="NỘP HỒ SƠ" class="btn btn-success" style="float:right;"> -->
 										
 										<p style="margin-top:70px;font-weight: bold;">Lương : <span style="color: #337ab7;"><?php echo $data['mucluong'] ?></span></p>
 										<p style="font-weight: bold;">Giới tính : <span>
@@ -156,5 +156,5 @@
 				</div>
 			</div>
 		</div>
-		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+	
 	</div>

@@ -1,10 +1,10 @@
 <?php  
 class User{
 
-	public function UserLogin($email,$pass){
-		$sql = "SELECT email,ten,password FROM tb_thanhvien WHERE email =:e AND password=:p";
+	public function UserLogin($tentk,$pass){
+		$sql = "SELECT ten_tk,password,id_loaitk FROM tb_taikhoan WHERE ten_tk =:t AND password=:p";
 		$stmt = DB::getInstance()->prepare($sql);
-		$stmt->bindParam(":e",$email);
+		$stmt->bindParam(":t",$tentk);
 		$stmt->bindParam(":p",$pass);
 		$stmt->execute();
 		$count = $stmt->rowCount();
@@ -15,11 +15,33 @@ class User{
 			return false;
 		}
 	}
-	public function Register(){
-		$this->render("register");
+	public function accountRegister($tentk,$pass,$tk){
+		$sql = "INSERT INTO tb_taikhoan(ten_tk,password,id_loaitk) VALUES ('$tentk','$pass','$tk')";
+		$stmt = DB::getInstance()->prepare($sql);
+		// $resutl = DB::getInstance()->lastInsertId();
+				try { 
+		        DB::getInstance()->beginTransaction(); 
+		        $stmt->execute(); 
+		        $result =  DB::getInstance()->lastInsertId(); 
+		        DB::getInstance()->commit(); 
+		        return $result;
+		    } catch(PDOExecption $e) { 
+		        $dbh->rollback(); 
+		        print "Error!: " . $e->getMessage() . "</br>"; 
+		    } 
 	}
-	public function userRegister($tentv,$sdt,$email,$pass){
-		$sql = "INSERT INTO tb_thanhvien(ten,sdt,email,password) VALUES ('$tentv','$sdt','$email','$pass')";
+
+	public function userRegister($tentv,$sdt,$email,$idtk){
+		$sql = "INSERT INTO tb_thanhvien(ten,sdt,email,id_tk) VALUES ('$tentv','$sdt','$email','$idtk')";
+		$stmt = DB::getInstance()->prepare($sql);
+		if($stmt->execute()){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function businessRegister($tendn,$sdt,$email,$diachi,$idtk){
+		$sql = "INSERT INTO tb_nhatd(ten,sdt,email,diachi,id_tk) VALUES ('$tendn','$sdt','$email','$diachi','$idtk')";
 		$stmt = DB::getInstance()->prepare($sql);
 		if($stmt->execute()){
 			return true;
