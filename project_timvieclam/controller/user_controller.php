@@ -108,7 +108,10 @@ class UserController extends BaseController{
 		
 	}	
 	
-
+	//xem công việc đã nộp
+	public function userJobSent(){
+		$this->render('user-job-sent');
+	}
 	// chức năng đăng xuất 
 	public function logout(){
 		unset($_SESSION['login']);
@@ -123,6 +126,28 @@ class UserController extends BaseController{
 	}
 	public function indexAdmin(){
 		$this->render('index_admin');
+	}
+	public function checkFile(){
+		if (isset($_POST['submit']) && isset($_FILES)) {
+			$name = $_FILES['CVcongviec']['name'];
+			$type = $_FILES['CVcongviec']['type'];
+			$size = $_FILES['CVcongviec']['size'];
+			$tmp = $_FILES['CVcongviec']['tmp_name'];
+			
+
+			if(move_uploaded_file($tmp,"upload/".$name)){
+				echo "Move thành công";
+				$user = new User();
+				$result = $user->userAddCv("1",'2','upload/'.$name);
+				if ($result == true) {
+					echo "added vào csdl ";
+				}else{
+					echo "không add dược";
+				}
+			}else{
+				echo "Không thành công";
+			}
+		}
 	}
 }
 

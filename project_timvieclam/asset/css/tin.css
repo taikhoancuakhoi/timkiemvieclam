@@ -1,7 +1,4 @@
-*{
-    padding: 0px;
-    margin:0px;
-}
+
 
 .header{
        background:#6699FF;
@@ -248,4 +245,26 @@ hr{
 .put{
     margin-top: 35px;
     margin-left:193px; 
+}
+.box-menu ul{
+    background: #1F568B;
+    list-style-type: none;
+    text-align: center;
+}
+.box-menu li{
+    color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+.box-menu a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+.box-menu a:hover{
+   background: #F1F1F1;
+  color: #333;
 }

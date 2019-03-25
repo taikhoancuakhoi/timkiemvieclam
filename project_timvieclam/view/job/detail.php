@@ -66,9 +66,18 @@
 									
 										
 									</div>
-								</div>
 
-								<input type="submit" name="" value="NỘP HỒ SƠ" class="btn btn-danger form-control" style="width: 95%;margin-left: 20px;height: 40px;margin-top: 20px;	">
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<!-- UP file -->
+									<form action="?controller=user&action=checkFile" method="POST" enctype="multipart/form-data">
+										<input type="file" name="CVcongviec" style="margin:10px 20px">
+										<input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-danger form-control" style="margin-left: 20px;width: 95%;height: 40px">
+									</form>
+								</div>
+								</div>
+								
 								
 								<br/>
 							</div>

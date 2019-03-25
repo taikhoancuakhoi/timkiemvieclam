@@ -73,6 +73,16 @@ class User{
 		}
 		return $result;	
 	}
+	public function userAddCv($tv,$ntd,$link){
+		$sql = "INSERT INTO tb_tv_ntd(id_thanhvien,id_nhatd,link_file) VALUES ('$tv','$ntd','$link')";
+		$stmt = DB::getInstance()->prepare($sql);
+		if ($stmt->execute()) {
+			return true;
+		}else{
+			return false;
+		}
+	
+	}
 	// public function postBusiness(){
 	// 	$sql = "INSERT INTO tb_baituyen(tieude,) VALUES ()";
 	// }

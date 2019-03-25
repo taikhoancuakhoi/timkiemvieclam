@@ -13,7 +13,7 @@
 					<li>
 						<ul>
 							<li>Quản lý việc làm</li>
-							<li><a href="?controller=user&action=userJobSent">Việc làm đã ứng tuyển</li>
+							<li><a href="user-job-ung-tuyen.html">Việc làm đã ứng tuyển</li>
 							<li><a href="job-saves.html">Việc làm đã lưu</li>
 							<li><a href="job-phu-hop.html">Công việc phù hợp</li>
 						</ul>
@@ -37,52 +37,30 @@
 	<div class="user-right-information">
 		<div class="header-menu">
 			<div class="hot-left"></div>
-			<div class="box-menu">
+			<!-- <div class="box-menu">
 				<ul>
 					<li><a href="#">Trang chủ</a></li>
 					<li><a href="#">Tuyển dụng</a></li>
 					<li><a href="#">Ứng viên</a></li>
-					<li><a href="#"><!-- Thông báo tin nhắn --></a></li>
 					<li><a href="#">Thoát</a></li>
 				</ul>
-			</div>
-			<div class="box-details">
-				<div class="candidate">
-					<div class="job-new">
-						<h4><a href="?controller=user&action=userJobSent">Việc làm đã ứng tuyển mới nhất</a></h4>
-						<hr>
-						<table border="1" cellpadding="10px" cellspacing="4" width="100%">
+			</div> -->
+			<div class="box-details"> 
+					<!-- <div class="job-new"> -->
+						<h4 align="center"><a href="?controller=user&action=userJobSent">Việc làm đã ứng tuyển</a></h4>
+						
+						<table class="table table-bordered table-responsive">
 							<tr>
 								<td>Tiêu đề công việc</td>
 								<td>Công ty</td>
 								<td>Ngày nộp</td>
 							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
 						</table>
-					</div>
-						<div class="job-saves">
-							<h4>Việc làm đã lưu mới nhất</h4>
-							<hr>
-							<table border="1" width="100%" cellpadding="10px" cellspacing="4">
-								<tr>
-									<td>Tiêu đề công việc</td>
-									<td>Công ty</td> 	
-									<td>Ngày nộp</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-							</table>
-						</div>
-				</div>
+					<!-- </div> -->
+
 			</div>
 
 		</div>
 	</div>
+	
 	<div class="" style="clear:both"></div>
