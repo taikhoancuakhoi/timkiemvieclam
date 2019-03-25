@@ -1,4 +1,6 @@
+
 <div class="body">
+	<!--  -->
 		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 		<div class="container">
 			<div class="row">
@@ -71,9 +73,24 @@
 								<div class="row">
 									<div class="col-lg-12">
 										<!-- UP file -->
-									<form action="?controller=user&action=checkFile" method="POST" enctype="multipart/form-data">
+									<form action="?controller=user&action=checkFile&id=<?php echo $_GET['id']; ?>" method="POST" enctype="multipart/form-data">
 										<input type="file" name="CVcongviec" style="margin:10px 20px">
-										<input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-danger form-control" style="margin-left: 20px;width: 95%;height: 40px">
+										<?php 
+
+											  $sql1 = "SELECT * FROM tb_ungtuyen WHERE id_baituyen =\"".$_GET['id']."\" AND id_thanhvien=\"".$_SESSION['tv']."\"";
+										
+											  $stm =DB::getInstance()->prepare($sql1);
+											  $stm->execute();
+											  // $row = $stm->fetch(PDO::FETCH_ASSOC);
+											  // echo $row;
+											  $count = $stm->rowCount();
+											  if ($count>0) {	
+											  
+										 ?>
+										<input type="submit" name="submit" value="ĐÃ NỘP HỒ SƠ" class="btn btn-danger form-control" style="background:red;margin-left: 20px;width: 95%;height: 40px"disabled>
+										<?php }else{  ?>
+										<input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px">
+									<?php }	 ?>
 									</form>
 								</div>
 								</div>

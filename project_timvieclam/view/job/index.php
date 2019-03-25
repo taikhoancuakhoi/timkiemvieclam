@@ -37,8 +37,7 @@
 			      </div>
 			    </div>
 			  </div>
-			<!--   <?php echo "<pre>";
-			   				print_r($data); ?> -->
+			
 			  <form method="POST" action='?controller=job&action=jobSearch' class="col-lg-12" id="searchForm">
 			   	<div class="row">
 			   		<div class="col-lg-5">

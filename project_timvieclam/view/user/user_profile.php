@@ -1,82 +1,46 @@
-
-<div class="user-left-information">
-			<div class="header-left">
-				<img src="sdfsd.jpg" >
-			</div>
-			<div class="image-user">
-				<img src="è.jpg" alt="">
-			</div>
-			<p>Name</p>
-				<ul>
-					<li><a href="#">Quản lý chung</a></li>
-					<li><a href="#">Quản lý hồ sơ</a></li>
-					<li>
-						<ul>
-							<li>Quản lý việc làm</li>
-							<li><a href="?controller=user&action=userJobSent">Việc làm đã ứng tuyển</li>
-							<li><a href="job-saves.html">Việc làm đã lưu</li>
-							<li><a href="job-phu-hop.html">Công việc phù hợp</li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li>Tin nhắn</li>
-							<li><a href="hop-thu-den.html">Hộp thư đến</li>
-							<li><a href="hop-thu-di.html">Hộp thư đi</li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li>Quản lý tài khoản</li>
-							<li><a href="thay-doi-mat-khau.html">Thay đổi mật khẩu</li>
-						</ul>
-					</li>
-				</ul>
-			
-	</div>
-	<div class="user-right-information">
+<div class="user-right-information">
 		<div class="header-menu">
 			<div class="hot-left"></div>
 			<div class="box-menu">
 				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Tuyển dụng</a></li>
-					<li><a href="#">Ứng viên</a></li>
-					<li><a href="#"><!-- Thông báo tin nhắn --></a></li>
-					<li><a href="#">Thoát</a></li>
+					<li id="box1"><a href="#" >Trang chủ</a></li>
+					<li id="box2"><a href="#" >Tuyển dụng</a></li>
+					<li id="box3"><a href="#" >Ứng viên</a></li>
+					<li id="box4"><a href="#" ><i class="far fa-bell" style="color: white"></i></a></li>
+					<li id="box5"><a href="#" >Thoát</a></li>
 				</ul>
 			</div>
 			<div class="box-details">
 				<div class="candidate">
 					<div class="job-new">
-						<h4><a href="?controller=user&action=userJobSent">Việc làm đã ứng tuyển mới nhất</a></h4>
-						<hr>
-						<table border="1" cellpadding="10px" cellspacing="4" width="100%">
+						<h4>Việc làm đã ứng tuyển mới nhất</h4>
+						
+						<table class="table table-bordered"  width="100%">
 							<tr>
 								<td>Tiêu đề công việc</td>
 								<td>Công ty</td>
 								<td>Ngày nộp</td>
 							</tr>
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>rể</td>
+								<td>ể</td>
+								<td>ê</td>
 							</tr>
 						</table>
 					</div>
 						<div class="job-saves">
 							<h4>Việc làm đã lưu mới nhất</h4>
-							<hr>
-							<table border="1" width="100%" cellpadding="10px" cellspacing="4">
+							
+							<table class="table table-bordered" width="100%" >
 								<tr>
 									<td>Tiêu đề công việc</td>
-									<td>Công ty</td> 	
+									<td>Công ty</td>
 									<td>Ngày nộp</td>
 								</tr>
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td>45</td>
+									<td>565</td>
+									<td>6765</td>
 								</tr>
 							</table>
 						</div>
@@ -85,4 +49,4 @@
 
 		</div>
 	</div>
-	<div class="" style="clear:both"></div>
+	<div style="clear: both;"></div>

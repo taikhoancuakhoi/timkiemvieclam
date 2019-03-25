@@ -33,6 +33,7 @@ class UserController extends BaseController{
 			if (is_array($data)) {
 				// cấp session cho user
 				$_SESSION['login'] = true;
+				$_SESSION['tv'] = $data['id_thanhvien'];
 				$_SESSION['quyen'] = $data['id_loaitk'];
 				header("location:".path."/?controller=job&action=index");
 				
@@ -115,11 +116,12 @@ class UserController extends BaseController{
 	// chức năng đăng xuất 
 	public function logout(){
 		unset($_SESSION['login']);
+		unset($_SESSION['tv']);
 		header("location:".path."/?controller=job&action=index");
 	}
 
 	public function userProfile(){
-		$this->render('user_profile');
+		$this->render1('user_profile');
 	}
 	public function businessProfile(){
 		$this->render('business_profile');
@@ -133,24 +135,21 @@ class UserController extends BaseController{
 			$type = $_FILES['CVcongviec']['type'];
 			$size = $_FILES['CVcongviec']['size'];
 			$tmp = $_FILES['CVcongviec']['tmp_name'];
-			
+			$thanhvien = $_SESSION['tv'];
+			$baituyen =  $_GET['id'];
 
 			if(move_uploaded_file($tmp,"upload/".$name)){
-				echo "Move thành công";
 				$user = new User();
-				$result = $user->userAddCv("1",'2','upload/'.$name);
+				$result = $user->userAddCv("$thanhvien","$baituyen",'upload/'.$name);
 				if ($result == true) {
-					echo "added vào csdl ";
+					header("location:".path."?controller=job&action=detail&id=".$baituyen);
 				}else{
-					echo "không add dược";
+					echo "Lỗi mù";
 				}
-			}else{
-				echo "Không thành công";
-			}
 		}
 	}
 }
-
+}
 
 
 // non hạy nhon tum non khóc vì tum

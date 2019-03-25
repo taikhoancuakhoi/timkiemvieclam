@@ -20,7 +20,7 @@ class Job{
 	}
 
 	public function getJobDetail($id){
-		$sql ="SELECT ab.tieude,ab.soluong,ab.gioitinh,ab.tuoi,ab.ngaydang,ab.hannop,ab.diadiem,ab.mota,ab.lienhe,ab.img,ab.mucluong,b.ten,ab.hinhthuc,a.ten_tp,b.ten,c.ten_nganh FROM tb_baituyen ab 
+		$sql ="SELECT ab.tieude,ab.soluong,ab.gioitinh,ab.tuoi,ab.ngaydang,ab.hannop,ab.diadiem,ab.mota,ab.lienhe,ab.img,ab.mucluong,b.ten,ab.hinhthuc,ab.id_nhatd,a.ten_tp,b.ten,c.ten_nganh FROM tb_baituyen ab 
 				JOIN 	tb_nhatd b ON ab.id_nhatd = b.id_nhatd 
 				JOIN tb_thanhpho a ON ab.id_thanhpho = a.id_thanhpho 
 				JOIN tb_nganh c ON ab.id_nganh = c.id_nganh

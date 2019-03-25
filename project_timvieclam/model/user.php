@@ -2,7 +2,9 @@
 class User{
 
 	public function UserLogin($tentk,$pass){
-		$sql = "SELECT ten_tk,password,id_loaitk FROM tb_taikhoan WHERE ten_tk =:t AND password=:p";
+		$sql = "SELECT a.ten_tk,a.password,a.id_loaitk,b.id_thanhvien FROM tb_thanhvien b 
+				JOIN tb_taikhoan a ON b.id_tk = a.id_tk
+		 		WHERE ten_tk =:t AND password=:p";
 		$stmt = DB::getInstance()->prepare($sql);
 		$stmt->bindParam(":t",$tentk);
 		$stmt->bindParam(":p",$pass);
@@ -73,8 +75,8 @@ class User{
 		}
 		return $result;	
 	}
-	public function userAddCv($tv,$ntd,$link){
-		$sql = "INSERT INTO tb_tv_ntd(id_thanhvien,id_nhatd,link_file) VALUES ('$tv','$ntd','$link')";
+	public function userAddCv($tv,$bt,$link){
+		$sql = "INSERT INTO tb_ungtuyen(id_thanhvien,id_baituyen,link_file) VALUES ('$tv','$bt','$link')";
 		$stmt = DB::getInstance()->prepare($sql);
 		if ($stmt->execute()) {
 			return true;
