@@ -119,8 +119,8 @@
 									<div class="col-lg-4" style="text-align: right;">
 										<div class="company-text1">
 											<div class="luong">
-												<i class="fas fa-dollar-sign"></i>
-												<span style="color: red;font-weight: bold;float: left;"> <?php echo $value['mucluong']; ?></span>
+												<i class="fas fa-dollar-sign" style="margin-right: 2px;"></i>
+												<span style="color: red;font-weight: bold;float:right;"> <?php echo $value['mucluong']; ?></span>
 											</div>
 											<div style="clear: both;height: 5px;"></div>
 											<div class="diadiem">

@@ -89,7 +89,7 @@
 						<div class="row">
 								
 								<div class="col-lg-8">
-								<div class="describe"><h4>CÔNG VIỆC TẠI <span style="color: blue">HÀ NỘI 	</span><span style="color:red ">3,6666</span></h4></div>
+								<div class="describe"><h4>CÔNG VIỆC TẠI <span style="color: blue">HÀ NỘI: </span><span style="color:red "><?php echo $data['soviechn']['hanoi']; ?></span></h4></div>
 								<div class="border">
 								<?php 
 									foreach ($data['baituyen'] as $job => $value) {
@@ -121,8 +121,8 @@
 									<div class="col-lg-4" style="text-align: right;">
 										<div class="company-text1">
 											<div class="luong">
-												<i class="fas fa-dollar-sign"></i>
-												<span style="color: red;font-weight: bold;float: left;"> <?php echo $value['mucluong']; ?></span>
+												<i class="fas fa-dollar-sign" style="margin-right: 2px;"></i>
+												<span style="color: red;font-weight: bold;float: right;"> <?php echo $value['mucluong']; ?></span>
 											</div>
 											<div style="clear: both;height: 5px;"></div>
 											<div class="diadiem">
@@ -144,7 +144,7 @@
 									
 					<!--Phần right--->
 							</div>
-							<div class="col-lg-4 right">
+							<div class="col-lg-4 right" style="margin-top:27px">
 								<div class="describe1"><h4>HOTLINE</h4></div>
 								<div class="hotline">
 									<div class="hot">

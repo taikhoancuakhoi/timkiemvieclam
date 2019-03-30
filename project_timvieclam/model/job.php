@@ -59,6 +59,17 @@ class Job{
 		return $result;
 	}
 
+	public function getJobNum(){
+		$sql = "SELECT count(*) as 'hanoi' FROM tb_baituyen a JOIN tb_thanhpho b ON a.id_thanhpho = b.id_thanhpho WHERE ten_tp ='Hà nội'" ;
+		$stmt = DB::getInstance()->prepare($sql);
+		$stmt->execute();
+		$count = $stmt->rowCount();
+		if ($count>0) {
+			$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		}
+		return $row;
+	}
+
 	//Tìm kiếm công việc trong index
 	public function getJobSearch($tieude,$nganh,$tp){
 		$result = array();

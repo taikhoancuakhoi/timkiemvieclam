@@ -24,7 +24,7 @@
     margin-right: 35px;
 }
 .menu li a{
-    padding:53px;
+    padding:60px;
     line-height: 100px;
         
 }
@@ -80,6 +80,7 @@
 .footer{
     background:#477ba3;
     height: auto;
+    padding-top: 30px;
 
 }
 .function a{
@@ -478,22 +479,14 @@ hr{
 .header-left img{
   margin-left:40px;
   margin-top: -10px;
-  
 }
 .image-user img{
   margin-left: 50px;
 }
-.user-left-information a{
-  text-decoration: none;
-}
-.user-right-information{
-  /*float: right;*/
-  border:1px solid black;
-  margin-left:249.4px;  
+.user-right-information{ 
   width:1119px;
   height:500px;
- /* margin-top: -625px;*/
- /* border-left:0px;*/
+
 }
 .user-right-information li{
   list-style-type: none;
@@ -501,9 +494,7 @@ hr{
 .user-right-information a{
   text-decoration: none; 
 }
-.box-menu{
 
-}
 /*=============trang doanh nghiệp========*/
 .enterprise-left-information{
   float: left;
@@ -568,10 +559,13 @@ hr{
   content:'\2039';
 }
 /*bos*/
+.box-menu{
+  width: 1200px;
+}
 .box-menu ul{
     background: #1F568B;
     list-style-type: none;
-    text-align: center;
+    
 }
 .box-menu li{
     color: #f1f1f1;
@@ -584,7 +578,7 @@ hr{
 .box-menu a{
     text-decoration: none;
     color: #fff;
-    display: block;
+    display: inline-block;
 }
 .box-menu a:hover{
    background: #F1F1F1;
@@ -619,13 +613,11 @@ hr{
 .user-left-information a{
   text-decoration: none;
 }
-.user-right-information{
-  margin-left:249.4px;  
+.user-right-information{ 
   width:1119px;
   height:890px;
- /* margin-top: -625px;*/
- border: 1px solid #ccc;
- border-top:  0px;
+/* border: 1px solid #ccc;*/
+ float: left;
 }
 .user-right-information li{
   list-style-type: none;
@@ -637,11 +629,13 @@ hr{
 .open a{
   display: block;
   padding:15px 0px 13px 27px;
-  font-size: 17px;
+  font-size: 15px;
   color: #FFFFCC;
 }
 
-
+ul.list{
+  list-style-type: none;
+}
 .list i{
   margin-top:10px;
 }   
@@ -654,7 +648,6 @@ hr{
 .list a:hover {
   background: ;
 }
-/*icon*/
 .list .sub-icon:after{
   content:'\203A';
   float: right;
@@ -671,6 +664,11 @@ hr{
   color:white;
 }
 /*bos*/
+.box-menu{
+  margin-left: 250px;
+  margin-top: -1px;
+  width: 12 00px;
+}
 .box-menu ul{
     background: #1F568B;
     list-style-type: none;
@@ -684,11 +682,10 @@ hr{
 .box-menu a{
     text-decoration: none;
     color:#e6e6e6;
-    padding-left: 40px; 
 }
 .box-menu a:hover{
   color:#FFFFFF ;
 }
-#box1{
-  margin-left: 600px;
-}
+.job-saves h4{margin-left:20px;}.job-new h4{margin-left: 20px;}
+.job-saves table{margin-left:20px;width: 95%;}.job-new table{margin-left:20px;width: 93%;}
+

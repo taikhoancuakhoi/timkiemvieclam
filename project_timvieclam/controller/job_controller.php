@@ -12,10 +12,12 @@ class JobController extends BaseController{
 		$data1 = $job_index->getJobRandom();
 		$data2 = $job_index->getCareer();
 		$data3 = $job_index->getCity();
+		$data4=$job_index->getJobNum();
 		$data = array(
 			'baituyen'=>$data1,
 			'nganh'=>$data2,
-			'thanhpho'=>$data3
+			'thanhpho'=>$data3,
+			'soviechn'=>$data4
 		);
 		
 		$this->render("index",$data);	
@@ -25,6 +27,11 @@ class JobController extends BaseController{
 		$jobDetail = new Job();
 		$data = $jobDetail->getJobDetail($_GET['id']);
 		$this->render("detail",$data);
+		// if (isset($_GET['id'])) {
+		// 	echo "<script type=text/javascript>alert('Hãy thêm file CV của bạn bên dưới')</script>";
+		// }else{
+		// 	header("location:".path."?controller=job&action=index");
+		// }
 	}
 	
 	public function jobSearch(){
@@ -52,6 +59,10 @@ class JobController extends BaseController{
 
 		}
 		
+	}
+
+	public function CamNang(){
+		$this->render("camnang");
 	}
 	
 }

@@ -35,6 +35,7 @@ class UserController extends BaseController{
 				$_SESSION['login'] = true;
 				$_SESSION['tv'] = $data['id_thanhvien'];
 				$_SESSION['quyen'] = $data['id_loaitk'];
+				$_SESSION['ten']=$data['ten'];
 				header("location:".path."/?controller=job&action=index");
 				
 
@@ -111,7 +112,10 @@ class UserController extends BaseController{
 	
 	//xem công việc đã nộp
 	public function userJobSent(){
-		$this->render('user-job-sent');
+		$idtv = $_SESSION['tv'];
+		$user = new User();
+		$data = $user->userJobSent($idtv);
+		$this->render1('user-job-sent',$data);
 	}
 	// chức năng đăng xuất 
 	public function logout(){
@@ -130,26 +134,37 @@ class UserController extends BaseController{
 		$this->render('index_admin');
 	}
 	public function checkFile(){
-		if (isset($_POST['submit']) && isset($_FILES)) {
-			$name = $_FILES['CVcongviec']['name'];
-			$type = $_FILES['CVcongviec']['type'];
-			$size = $_FILES['CVcongviec']['size'];
-			$tmp = $_FILES['CVcongviec']['tmp_name'];
-			$thanhvien = $_SESSION['tv'];
-			$baituyen =  $_GET['id'];
+		
+		if (isset($_SESSION['login']) && $_SESSION['login']==true) {
+				$baituyen =  $_GET['id'];
+				if (isset($_POST['submit']) && isset($_FILES['CVcongviec'])) {
+					$name = $_FILES['CVcongviec']['name'];
+					$type = $_FILES['CVcongviec']['type'];
+					$size = $_FILES['CVcongviec']['size'];
+					$tmp = $_FILES['CVcongviec']['tmp_name'];
+					$thanhvien = $_SESSION['tv'];
+					
 
-			if(move_uploaded_file($tmp,"upload/".$name)){
-				$user = new User();
-				$result = $user->userAddCv("$thanhvien","$baituyen",'upload/'.$name);
-				if ($result == true) {
-					header("location:".path."?controller=job&action=detail&id=".$baituyen);
+					move_uploaded_file($tmp,"upload/cvupload/".$name);
+						$user = new User();
+						$result = $user->userAddCv("$thanhvien","$baituyen",'upload/cvupload/'.$name);
+						if ($result == true) {
+							header("location:".path."?controller=job&action=detail&id=".$baituyen);
+						}else{
+							echo "Lỗi mù";
+						}
 				}else{
-					echo "Lỗi mù";
+					header("location:".path."?controller=job&action=detail&id=".$baituyen);
+
 				}
+		}else{
+			header("location:".path."?controller=user&action=login");
 		}
 	}
 }
-}
+		
+// 	public function userGETCV{}
+// }
 
 
 // non hạy nhon tum non khóc vì tum

@@ -1,4 +1,6 @@
 
+<?php if (isset($_SESSION['login']) && $_SESSION['login']==true) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +23,7 @@
 </head>
 
 <body>
+	
 			<div class="form-case">
 	<div class="user-left-information">
 			<div class="header-left">
@@ -29,15 +32,17 @@
 			<div class="image-user">
 				<a href="#"><img src="images/anh2.jpg" width="140xp"></a>
 			</div>
-			<p style="text-align: center;">Name</p>
+			<p style="text-align: center;"><span style="color:white;">Xin Chào: 
+				<?php if (isset($_SESSION['ten'])) {
+					echo $_SESSION['ten'];
+				} ?></span></p>
 			<div class="open">
 				<ul class="list" >
-					<li><a href="#"><i class="fas fa-tv"></i> Quản lý chung</a></li>
-					<li><a href="#" style="margin-left:2.4px;" ><i class="fas fa-clipboard-list"></i> Quản lý hồ sơ</a></li>
+					<li><a href="?controller=user&action=userProfile" style="margin-left:2.4px;" ><i class="fas fa-clipboard-list"></i> Quản lý hồ sơ</a></li>
 					<li class="dropdown">
 						<a href="#"><i class="fas fa-briefcase"></i> Quản lý việc làm</a><span class="sub-icon"></span>
 						<ul class="sub-menu">
-							<li><a href="user-job-ung-tuyen.html"><i class="far fa-circle" style="font-size: 10px"></i> Việc làm đã ứng tuyển</a></li>
+							<li><a href="?controller=user&action=userJobSent"><i class="far fa-circle" style="font-size: 10px"></i> Việc làm đã ứng tuyển</a></li>
 							<li><a href="job-saves.html"><i class="far fa-circle" style="font-size: 10px"></i> Việc làm đã lưu</a></li>
 							<li><a href="job-phu-hop.html"><i class="far fa-circle" style="font-size: 10px"></i> Công việc phù hợp</a></li>
 						</ul>
@@ -60,10 +65,23 @@
 		</div>
 			
 	</div>
+</div>
+	<div class="box-menu">
+				<ul>
+					<li ><a href="?controller=job&action=index" >Trang chủ</a></li>
+					<li id=""><a href="#" >Tuyển dụng</a></li>
+					<li id=""><a href="#" >Ứng viên</a></li>
+					<li id=""><a href="#" ><i class="far fa-bell" style="color: white"></i></a></li>
+					<li id=""><a href="?controller=user&action=logout" >Thoát</a></li>
+				</ul>
+			</div>
 	<div style="clear: both;"></div>
-
-	<<?= @$content ?>
-
-
+	
+	<div class="container" style="margin: 10px 250px;">
+	<?= @$content ?>
+	</div>
+	
 </body>
 </html>
+
+<?php } ?>

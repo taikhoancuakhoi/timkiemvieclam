@@ -2,7 +2,7 @@
 
 .header{
        background:#6699FF;
-
+      height: 100.5px;
     }
 .body{
     background:#EEEEEE;
@@ -36,16 +36,17 @@
 }
 .name-job{
     float:left;
+    margin-left: 250px;
     
 }
 .describe{
-    margin-left: 20px;
-    
+    margin:20px 50px;
+      
 }
 
 .click{
-    
-    margin-right: 20px;
+    width: 200px;
+    margin:-46px 120px;
 }
 .btn.btn-grey-bor{
     background-color: #fafafa;
@@ -75,20 +76,7 @@
 .tab{
     margin-left:20px;
 }
-/*.request p{
-    padding-top: 20px;
-}
-.description p{
-    padding-top:9px;
-}
-#tp{
-    height: 34px;
-    width: 200px;
-}
-#quan{
-    height: 34px;
-    width: 207px;
-}*/
+
 .hotline{
     
     background: white;
@@ -110,6 +98,11 @@
 .border{
     padding: 10px;
     background: white;
+    margin-top:-20px;
+}
+.border .row{
+  margin-top: 5px;
+  height: 90px;
 }
 .dot{
     background-color: white;
@@ -147,7 +140,8 @@
 }
 hr{
   border:1px solid black;
-  opacity: 0.5;
+  opacity: 0.1;
+
 }
 .carousel-caption{
   margin-top: -200px;

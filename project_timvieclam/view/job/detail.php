@@ -19,11 +19,11 @@
 								<a class="btn btn-grey-bor marginRight10 btn-luu-vl hidden-xs save-job-track" id="save-job" style="margin:0px 33px" onclick="bookmarkDetail(1247433)">
                                 		<i class="far fa-star"></i> Lưu việc làm
                             	</a>
-								<p style="float: left;margin:30px 300px;"><b>Ngày Cập Nhật:</b> <?php echo $data['ngaydang']; ?></p>
+								<p style="float: left;margin:30px 280px;width: 190px;text-align: center;"><b>Ngày Cập Nhật:</b> <?php echo date("d-m-Y",strtotime($data['ngaydang'])); ?></p>
 								
                             	<div style="clear: both;"></div>
 							</div>
-							<p style="font-size:17px;color:#FF6633;text-align: center;">THÔNG TIN TUYỂN DỤNG</p>
+							<p style="font-size:17px;color:#FF6633;text-align: center;"><b>THÔNG TIN TUYỂN DỤNG</b></p>
 							<div class="row">
 								<div class="col-lg-6 left">
 										
@@ -70,14 +70,14 @@
 									</div>
 
 								</div>
-								<div class="row">
-									<div class="col-lg-12">
+								<div class="row" >
+									<div class="col-lg-12" style="margin-top: 100px">
 										<!-- UP file -->
 									<form action="?controller=user&action=checkFile&id=<?php echo $_GET['id']; ?>" method="POST" enctype="multipart/form-data">
 										<input type="file" name="CVcongviec" style="margin:10px 20px">
 										<?php 
-
-											  $sql1 = "SELECT * FROM tb_ungtuyen WHERE id_baituyen =\"".$_GET['id']."\" AND id_thanhvien=\"".$_SESSION['tv']."\"";
+											if (isset($_SESSION['tv'])) {
+												 $sql1 = "SELECT * FROM tb_ungtuyen WHERE id_baituyen =\"".$_GET['id']."\" AND id_thanhvien=\"".$_SESSION['tv']."\"";
 										
 											  $stm =DB::getInstance()->prepare($sql1);
 											  $stm->execute();
@@ -85,12 +85,15 @@
 											  // echo $row;
 											  $count = $stm->rowCount();
 											  if ($count>0) {	
+											 
 											  
 										 ?>
 										<input type="submit" name="submit" value="ĐÃ NỘP HỒ SƠ" class="btn btn-danger form-control" style="background:red;margin-left: 20px;width: 95%;height: 40px"disabled>
-										<?php }else{  ?>
+										<?php }else{  echo "<script type='text/javascript'>alert('Mời thêm file CV bên dưới trước khi nộp hồ sơ');</script>" ?>
 										<input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px">
-									<?php }	 ?>
+									<?php }}else{?>
+										<input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px">
+									<?php } ?>
 									</form>
 								</div>
 								</div>

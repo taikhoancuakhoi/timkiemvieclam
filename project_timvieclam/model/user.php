@@ -2,7 +2,7 @@
 class User{
 
 	public function UserLogin($tentk,$pass){
-		$sql = "SELECT a.ten_tk,a.password,a.id_loaitk,b.id_thanhvien FROM tb_thanhvien b 
+		$sql = "SELECT a.ten_tk,a.password,a.id_loaitk,b.id_thanhvien,b.ten FROM tb_thanhvien b 
 				JOIN tb_taikhoan a ON b.id_tk = a.id_tk
 		 		WHERE ten_tk =:t AND password=:p";
 		$stmt = DB::getInstance()->prepare($sql);
@@ -84,6 +84,20 @@ class User{
 			return false;
 		}
 	
+	}
+	public function userJobSent($idtv){
+		$result =array();
+		$sql ="SELECT a.tieude,ab.thoigian,b.ten,ab.id_baituyen FROM tb_ungtuyen ab JOIN tb_baituyen a ON a.id_baituyen = ab.id_baituyen JOIN tb_nhatd b ON b.id_nhatd = a.id_nhatd WHERE ab.id_thanhvien ='".$idtv."'";
+		$stmt =DB::getInstance()->prepare($sql);
+		// $stmt->bindParam(":tv",$idtv);
+		$stmt->execute();
+		$count = $stmt->rowCount();
+		if ($count>0) {
+			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+				$result[]=$row;
+			}
+		}
+		return $result;
 	}
 	// public function postBusiness(){
 	// 	$sql = "INSERT INTO tb_baituyen(tieude,) VALUES ()";
