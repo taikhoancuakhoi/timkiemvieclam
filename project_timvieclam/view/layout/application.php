@@ -49,13 +49,13 @@
 <!-- 
 		<div class="nav"> -->
 		<!-- 	<div class="container"> -->
-				<div class="header">
+				<!-- <div class="header">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 								<ul class="menu">
 
 									<li style="margin-top:-10px;padding-top: 10px"><a href="?controller=job&action=index"><img src="asset/images/logo.png" width="170px" height="100px"></a></li>
-									<li><a href="?controller=document&action=index">CẨM NANG</a></li>
+									<li><a href="?controller=job&action=camnang">CẨM NANG</a></li>
 									<?php 
 										if(isset($_SESSION['login']) && $_SESSION['login']==true){
 											if (isset($_SESSION['quyen']) && $_SESSION['quyen']=='3') {
@@ -93,13 +93,65 @@
 						</div>
 						
 					</div>
-				</div>
-			<!-- </div> -->	<!-- container -->
-		
-	<!-- <div class="container"> -->
+				</div> -->
+
+			<body id="body" data-spy="scroll" data-target=".header">
+
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        
+                        <div class="logo">
+                            <a class="logo-wrap" href="index.html">
+                                <img class="logo-img logo-img-main" src="assets/img/logo1.png" >
+                                <img class="logo-img logo-img-active" src="assets/img/logo.png">
+                            </a>
+                        </div>
+                        
+                    </div>
+                    <!-- End Logo -->
+
+                    
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=job&action=index">Trang chủ</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#">Cẩm nang</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="phantrang.html">Đăng ký</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="phantrang-dangnhap.html">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+      
+        <!--========== SLIDER ==========-->
+        <div class="promo-block">
+            <div class="container">
+                <div class="margin-b-40">
+                </div>
+                                    
+            </div>
+        </div>
+        <br>
+			
 
 	<?= @$content ?>
-	<!-- </div> -->
+
+
 
 
 	<div class="footer">
