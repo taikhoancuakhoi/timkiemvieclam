@@ -29,7 +29,7 @@ class JobController extends BaseController{
 	public function detail(){
 		$jobDetail = new Job();
 		$data = $jobDetail->getJobDetail($_GET['id']);
-		$this->render2("detail",$data);
+		$this->render2("detail1",$data);
 		// if (isset($_GET['id'])) {
 		// 	echo "<script type=text/javascript>alert('Hãy thêm file CV của bạn bên dưới')</script>";
 		// }else{
