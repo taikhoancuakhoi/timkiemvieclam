@@ -30,54 +30,7 @@
         <link rel="shortcut icon" href="favicon.ico"/>
     </head>
 
-<!-- 
-		<div class="nav"> -->
-		<!-- 	<div class="container"> -->
-				<!-- <div class="header">
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-								<ul class="menu">
 
-									<li style="margin-top:-10px;padding-top: 10px"><a href="?controller=job&action=index"><img src="asset/images/logo.png" width="170px" height="100px"></a></li>
-									<li><a href="?controller=job&action=camnang">CẨM NANG</a></li>
-									<?php 
-										if(isset($_SESSION['login']) && $_SESSION['login']==true){
-											if (isset($_SESSION['quyen']) && $_SESSION['quyen']=='3') {
-											
-											
-									?>	
-										<li><a href="?controller=user&action=businessProfile">Quản Lý DN</a></li>
-										 
-										
-									<?php	
-										}else if(isset($_SESSION['quyen']) && $_SESSION['quyen']=='2'){
-											
-									?>
-										<li><a href="?controller=user&action=userProfile">Quản Lý NTV</a></li>
-									<?php 
-										}else if(isset($_SESSION['quyen']) && $_SESSION['quyen']='1'){
-											header("location:".path."?controller=user&action=indexAdmin");
-										}
-									 ?>
-										<li><a href="?controller=user&action=logout">Đăng xuất</a></li>
-									<?php
-										
-									}else{
-									?>
-
-									<li><a href="?controller=user&action=chooseRegister">ĐĂNG KÝ</a></li>
-									<li><a href="?controller=user&action=login">ĐĂNG NHẬP</a></li>
-									
-										
-									<?php 
-										}
-									 ?>
-									
-								</ul>
-						</div>
-						
-					</div>
-				</div> -->
 
 <body id="body" data-spy="scroll" data-target=".header">
 		<header class="header navbar-fixed-top">

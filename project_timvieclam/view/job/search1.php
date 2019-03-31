@@ -40,7 +40,7 @@
                     </span>
                 </p>
                 <input type="submit" name="btn" class="btn btn-primary"  value="Search" style="width: 100px;height: 40px;">  
-                </form>                            
+                </form>                  
             </div>
         </div>
         <!--========== SLIDER ==========-->
@@ -51,7 +51,7 @@
             <div class="container content-lg">
                 <div class="row text-center margin-b-40">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <h2 class="" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-iteration="1">Việc Làm tuyển gấp <span style="color: red;font-size: 20px;">*</span></h2>
+                        <h2 class="" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-iteration="1">Kết Quả Tìm Kiếm <span style="color: red;font-size: 20px;">*</span></h2>
                         
                     </div>
                 </div>

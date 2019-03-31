@@ -29,13 +29,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="odd gradeX">
-                                            <td>Trident</td>
-                                            <td>vingroup</td>
-                                            <td>20-11-2019</td>
-                                            
+                                        <?php 
+                                            foreach ($data as $key => $value) {
+                                        ?>
+                                        <tr>
+                                            <td><a href="?controller=job&action=detail&id=<?php echo $value['id_baituyen']; ?>"><?php echo ucwords($value['tieude']); ?></a></td>
+                                            <td><?php echo $value['ten'] ?></td>
+                                            <td><?php echo date('d-m-Y',strtotime($value['thoigian'])); ?></td>
                                         </tr>
-                                       
+
+                                        <?php   }?>
+                                                                           
                                     </tbody>
                                 </table>
                             </div>

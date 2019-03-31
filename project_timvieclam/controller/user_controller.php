@@ -117,7 +117,9 @@ class UserController extends BaseController{
 		$idtv = $_SESSION['tv'];
 		$user = new User();
 		$data = $user->userJobSent($idtv);
-		$this->render1('user-job-sent',$data);
+		$this->render3('user-job-sent1',$data);
+
+		
 	}
 	// chức năng đăng xuất 
 	public function logout(){
@@ -127,7 +129,7 @@ class UserController extends BaseController{
 	}
 
 	public function userProfile(){
-		$this->render1('user_profile');
+		$this->render3('user_profile1');
 	}
 	public function businessProfile(){
 		$this->render('business_profile');

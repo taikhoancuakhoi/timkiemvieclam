@@ -35,28 +35,33 @@ class JobController extends BaseController{
 	}
 	
 	public function jobSearch(){
-		if (isset($_POST['txt_name_search'])) {
+		if (isset($_POST['btn'])) {
 			$tieude = $_POST['txt_name_search'];
 		    $nganh = $_POST['txt_nganh'];
 			$tp = $_POST['txt_tp'];
+			
+			
+
 			$jobSearch = new Job();
 			$data1 = $jobSearch->getJobSearch($tieude,$nganh,$tp);
-
 			//Ném dữ liệu ra thanh tìm kiếm
 			$data2 = $jobSearch->getCareer();
 			$data3 = $jobSearch->getCity();
+
 			$data = array(
 				'baituyen'=>$data1,
 				'nganh'=>$data2,
 				'thanhpho'=>$data3
 			);
 			
-			if ($data == null) {
+			if ($data['baituyen'] == null) {
 				header("location:".path."?controller=job&action=index");
 			}else{
-				$this->render('search',$data);
+				$this->render('search1',$data);
 			}
-
+			
+		}else{
+			echo "haha";
 		}
 		
 	}
