@@ -61,7 +61,7 @@
                                         <input type="file" name="CVcongviec" style="margin:10px 20px">
                                         <?php 
                                             if (isset($_SESSION['tv'])) {
-                                           
+
                                                  $sql1 = "SELECT * FROM tb_ungtuyen WHERE id_baituyen =\"".$_GET['id']."\" AND id_thanhvien=\"".$_SESSION['tv']."\"";
                                         
                                               $stm =DB::getInstance()->prepare($sql1);
@@ -73,11 +73,11 @@
                                              
                                               
                                          ?>
-                                        <input type="submit" name="submit" value="ĐÃ NỘP HỒ SƠ" class="btn btn-danger form-control" style="background:red;margin-left: 20px;width: 95%;height: 40px"disabled>
+                                        <input type="submit" name="submit" value="ĐÃ NỘP HỒ SƠ" class="btn btn-danger form-control" style="background:red;margin-left: 20px;width: 95%;height: 40px" disabled>
                                         <?php }else{  echo "<script type='text/javascript'>alert('Mời thêm file CV bên dưới trước khi nộp hồ sơ');</script>" ?>
                                         <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px">
                                     <?php }}else{?>
-                                        <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px">
+                                        <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px,background:#2e6da4;">
                                     <?php } ?>
                                     </form>
 
