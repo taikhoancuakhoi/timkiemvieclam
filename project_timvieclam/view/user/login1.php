@@ -34,11 +34,12 @@
             </div>
 
           </fieldset>
-      </form>
-          <br>
           <div class=" text-center">
             <button class="btn btn-primary btn-danger"><i class="fa fa-user"></i> Đăng nhập</button>
           </div>
+      </form>
+          <br>
+          
         </div>
       </div>
     </div>
