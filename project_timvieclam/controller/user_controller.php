@@ -7,19 +7,20 @@ class UserController extends BaseController{
 		$this->folder = "user";
 	}
 	public function login(){
-		if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
-			header("location:".path."/?controller=job&action=index");
-		}
-		$this->render("login");
-		//thông báo sai tên tài khoản mật khẩu đăng nhập
-		if (isset($_GET['result']) && $_GET['result'] == 'sai') {
-			echo "<script type='text/javascript'>alert('Sai tên tk hoặc mk');</script>'";
-		}
+		// if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+		// 	header("location:".path."/?controller=job&action=index");
+		// }
+		// $this->render("login");
+		// //thông báo sai tên tài khoản mật khẩu đăng nhập
+		// if (isset($_GET['result']) && $_GET['result'] == 'sai') {
+		// 	echo "<script type='text/javascript'>alert('Sai tên tk hoặc mk');</script>'";
+		// }
 
-		//Thông báo đăng ký thành công 
-		if (isset($_GET['register']) && $_GET['register']=='true' ) {
-			echo "<script type='text/javascript'>alert('Đăng ký thành công, mời đăng nhập');</script>'";
-		}
+		// //Thông báo đăng ký thành công 
+		// if (isset($_GET['register']) && $_GET['register']=='true' ) {
+		// 	echo "<script type='text/javascript'>alert('Đăng ký thành công, mời đăng nhập');</script>'";
+		// }
+		$this->render2("login");
 
 	}
 
@@ -49,7 +50,7 @@ class UserController extends BaseController{
 	}
 
 	public function chooseRegister(){
-		$this->render("register");	
+		$this->render2("register");	
 	}
 	public function userRegister(){
 		$this->render('userRegister');

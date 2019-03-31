@@ -19,14 +19,17 @@ class JobController extends BaseController{
 			'thanhpho'=>$data3,
 			'soviechn'=>$data4
 		);
+		// echo "<pre>";
+		// print_r($data);
 		
-		$this->render("index",$data);	
+		// $this->render("index",$data);
+		$this->render('index1',$data);	
 	}
 	//trang thông tin chi tiết
 	public function detail(){
 		$jobDetail = new Job();
 		$data = $jobDetail->getJobDetail($_GET['id']);
-		$this->render("detail",$data);
+		$this->render2("detail",$data);
 		// if (isset($_GET['id'])) {
 		// 	echo "<script type=text/javascript>alert('Hãy thêm file CV của bạn bên dưới')</script>";
 		// }else{

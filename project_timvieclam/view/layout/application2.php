@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
         <meta charset="utf-8"/>
         <title>SV job</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,74 +14,25 @@
         <link href="asset/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
         <link href="asset/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <!-- animate -->
-    
+
         <!-- PAGE LEVEL PLUGIN STYLES -->
         <link href="asset/css/animate.css" rel="stylesheet">
         <link href="asset/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
         <link href="asset/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
 
         <!-- THEME STYLES -->
-        <link href="asset/css/layout.min.css" rel="stylesheet" type="text/css"/>
-       
-          
-        <!-- hover -->
-        <link rel="stylesheet" href="asset/css/hover.css">
+        <link href="asset/css/layout1.min.css" rel="stylesheet" type="text/css"/>
+
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
     </head>
+    <!-- END HEAD -->
 
-<!-- 
-		<div class="nav"> -->
-		<!-- 	<div class="container"> -->
-				<!-- <div class="header">
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-								<ul class="menu">
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
 
-									<li style="margin-top:-10px;padding-top: 10px"><a href="?controller=job&action=index"><img src="asset/images/logo.png" width="170px" height="100px"></a></li>
-									<li><a href="?controller=job&action=camnang">CẨM NANG</a></li>
-									<?php 
-										if(isset($_SESSION['login']) && $_SESSION['login']==true){
-											if (isset($_SESSION['quyen']) && $_SESSION['quyen']=='3') {
-											
-											
-									?>	
-										<li><a href="?controller=user&action=businessProfile">Quản Lý DN</a></li>
-										 
-										
-									<?php	
-										}else if(isset($_SESSION['quyen']) && $_SESSION['quyen']=='2'){
-											
-									?>
-										<li><a href="?controller=user&action=userProfile">Quản Lý NTV</a></li>
-									<?php 
-										}else if(isset($_SESSION['quyen']) && $_SESSION['quyen']='1'){
-											header("location:".path."?controller=user&action=indexAdmin");
-										}
-									 ?>
-										<li><a href="?controller=user&action=logout">Đăng xuất</a></li>
-									<?php
-										
-									}else{
-									?>
-
-									<li><a href="?controller=user&action=chooseRegister">ĐĂNG KÝ</a></li>
-									<li><a href="?controller=user&action=login">ĐĂNG NHẬP</a></li>
-									
-										
-									<?php 
-										}
-									 ?>
-									
-								</ul>
-						</div>
-						
-					</div>
-				</div> -->
-
-<body id="body" data-spy="scroll" data-target=".header">
-		<header class="header navbar-fixed-top">
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
             <!-- Navbar -->
             <nav class="navbar" role="navigation">
                 <div class="container">
@@ -91,28 +43,25 @@
                             <span class="toggle-icon"></span>
                         </button>
 
-                        <!-- Logo -->
+                        
                         <div class="logo">
-                            <a class="logo-wrap" href="?controller=job&action=index">
+                            <a class="logo-wrap" href="index.html">
                                 <img class="logo-img logo-img-main" src="asset/img/logo1.png" >
                                 <img class="logo-img logo-img-active" src="asset/img/logo.png">
                             </a>
                         </div>
-                        <!-- End Logo -->
+                        
                     </div>
+                    <!-- End Logo -->
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    
                     <div class="collapse navbar-collapse nav-collapse">
                         <div class="menu-container">
                             <ul class="nav navbar-nav navbar-nav-right">
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=job&action=index">Trang chủ</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=job&action=camnang">Cẩm nang</a></li>
-									
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"  href="?controller=user&action=chooseRegister">Đăng ký</a></li>
-
-
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"  href="?controller=user&action=register">Đăng ký</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"  href="?controller=user&action=login">Đăng nhập</a></li>
-
                             </ul>
                         </div>
                     </div>
@@ -122,15 +71,10 @@
             <!-- Navbar -->
         </header>
         <!--========== END HEADER ==========-->
-      
-			
-
-	<?= @$content ?>
-
-
-
-
-	 <footer class="footer">
+        <!--========== SLIDER ==========-->
+       <?= @$content ?>
+        <!--========== FOOTER ==========-->
+        <footer class="footer" style="margin-bottom: -100px;">
             <!-- Links -->
             <div class="section-seperator">
                 <div class="content-md container">
@@ -202,5 +146,7 @@
         <script src="asset/js/components/maginific-popup.min.js" type="text/javascript"></script>
         <script src="asset/js/components/masonry.min.js" type="text/javascript"></script>
         <script src="asset/js/components/gmap.min.js" type="text/javascript"></script>
-</body>
+
+    </body>
+    <!-- END BODY -->
 </html>
