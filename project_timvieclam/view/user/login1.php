@@ -11,31 +11,31 @@
     <div class="col-md-4 col-md-offset-4" style="box-shadow: 1px 1px 1px 1px #ccc;">
       <br>
       <!-- Nav tabs -->
-      <h3 style="text-align: center;">Đăng nhập thành viên</h3>
+      <h3 style="text-align: center;">Đăng Nhập</h3>
       
       
       <div class="tab">
        
         <div class="tab" >
           <br>  
-          <form action="" method="POST">
+          <form action="?controller=user&action=checkLogin" method="POST">
           <fieldset>
             <div class="form-group">
               <div class="right">
                 <b>Tài khoản</b>
-                <input class="form-control " placeholder="Tài khoản" type="text">
+                <input class="form-control" name="txt_nametk" placeholder="Tài khoản" type="text" required>
               </div>
             </div>
             <div class="form-group">
               <div class="right">
                 <b>Mật khẩu</b>
-                <input class="form-control" placeholder="Mật khẩu" type="password">
+                <input class="form-control" placeholder="Mật khẩu" name="txt_pass" type="password" required>
               </div>
             </div>
 
           </fieldset>
           <div class=" text-center">
-            <button class="btn btn-primary btn-danger"><i class="fa fa-user"></i> Đăng nhập</button>
+            <button class="btn btn-primary btn-danger" name="submit"><i class="fa fa-user"></i> Đăng nhập</button>
           </div>
       </form>
           <br>

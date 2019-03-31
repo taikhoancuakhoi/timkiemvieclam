@@ -108,10 +108,38 @@
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=job&action=index">Trang chủ</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=job&action=camnang">Cẩm nang</a></li>
 									
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"  href="?controller=user&action=chooseRegister">Đăng ký</a></li>
+                                 <?php 
+                                        if(isset($_SESSION['login']) && $_SESSION['login']==true){
+                                            if (isset($_SESSION['quyen']) && $_SESSION['quyen']=='3') {
+                                            
+                                            
+                                    ?>  
+                                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=user&action=businessProfile">Quản Lý DN</a></li>
+                                         
+                                        
+                                    <?php   
+                                        }else if(isset($_SESSION['quyen']) && $_SESSION['quyen']=='2'){
+                                           
+                                    ?>
+                                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=user&action=userProfile">Quản Lý NTV</a></li>
+                                    <?php 
+                                        }else if(isset($_SESSION['quyen']) && $_SESSION['quyen']='1'){
+                                            header("location:".path."?controller=user&action=indexAdmin");
+                                        }
+                                     ?>
+                                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=user&action=logout">Đăng xuất</a></li>
+                                    <?php
+                                        
+                                    }else{
+                                    ?>
 
-
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"  href="?controller=user&action=login">Đăng nhập</a></li>
+                                    <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=user&action=chooseRegister">ĐĂNG KÝ</a></li>
+                                    <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=user&action=login">ĐĂNG NHẬP</a></li>
+                                    
+                                        
+                                    <?php 
+                                        }
+                                     ?>
 
                             </ul>
                         </div>

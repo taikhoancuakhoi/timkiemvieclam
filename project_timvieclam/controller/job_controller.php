@@ -19,10 +19,7 @@ class JobController extends BaseController{
 			'thanhpho'=>$data3,
 			'soviechn'=>$data4
 		);
-		// echo "<pre>";
-		// print_r($data);
-		
-		// $this->render("index",$data);
+
 		$this->render('index1',$data);	
 	}
 	//trang thông tin chi tiết
