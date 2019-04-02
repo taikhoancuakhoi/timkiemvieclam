@@ -10,32 +10,69 @@ class UserController extends BaseController{
 		if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
 			header("location:".path."/?controller=job&action=index");
 		}else{
-			$this->render2("login1");
+			header("location:".path."/?controller=user&action=chooseLogin");
 		}
 		//thông báo sai tên tài khoản mật khẩu đăng nhập
 		if (isset($_GET['result']) && $_GET['result'] == 'sai') {
 			echo "<script type='text/javascript'>alert('Sai tên tk hoặc mk');</script>'";
 		}
 
-		//Thông báo đăng ký thành công 
-		if (isset($_GET['register']) && $_GET['register']=='true' ) {
-			echo "<script type='text/javascript'>alert('Đăng ký thành công, mời đăng nhập');</script>'";
-		}
-		// $this->render2('login1');
 
 	}
+	public function chooseLogin(){
+		$this->render2("chooseLogin");
+	}
 
-	public function checkLogin(){
-		
+	public function userLogin(){
+		$this->render2("userLogin");
+	}
+	public function businessLogin(){
+		$this->render2('businessLogin');
+	}
+
+
+
+	public function checkUserLogin(){
 		if(isset($_POST['txt_nametk'])){
 			$tentk = $_POST['txt_nametk'];
 			$pass = $_POST['txt_pass'];
 			$user = new User();
-			$data = $user->UserLogin($tentk,$pass);
+			$data = $user->userLogin($tentk,$pass);
 			if (is_array($data)) {
 				// cấp session cho user
 				$_SESSION['login'] = true;
 				$_SESSION['tv'] = $data['id_thanhvien'];
+				$_SESSION['quyen'] = $data['id_loaitk'];
+				$_SESSION['ten']=$data['ten'];
+
+				if (isset($_SESSION['detail'])) {
+					header("location:".path."/?controller=job&action=detail&id=".$_SESSION['detail']);
+					
+				}else{
+					header("location:".path."/?controller=job&action=index");
+
+					
+				}
+
+			}else{
+				header("location:".path."/?controller=user&action=login&result=sai");
+			}
+		}else{
+			die("không có post");
+		}
+		
+	}
+	public function checkBusinessLogin(){
+		if(isset($_POST['txt_nametk'])){
+			$tentk = $_POST['txt_nametk'];
+			$pass = $_POST['txt_pass'];
+			$user = new User();
+			$data = $user->businessLogin($tentk,$pass);
+	
+			if (is_array($data)) {
+				// cấp session cho user
+				$_SESSION['login'] = true;
+				$_SESSION['tv'] = $data['id_nhatd'];
 				$_SESSION['quyen'] = $data['id_loaitk'];
 				$_SESSION['ten']=$data['ten'];
 				header("location:".path."/?controller=job&action=index");
@@ -47,14 +84,14 @@ class UserController extends BaseController{
 		}else{
 			die("không có post");
 		}
-		
-	}
 
+	}
+	
 	public function chooseRegister(){
 		$this->render2("register");	
 	}
 	public function userRegister(){
-		$this->render('userRegister');
+		$this->render5('userRegister1');
 
 		
 		if (isset($_GET['register']) && $_GET['register'] == 'false') {
@@ -103,12 +140,13 @@ class UserController extends BaseController{
 				$data = $user->accountRegister($ten,$pass,$quyen);
 				$result = $user->businessRegister($ten,$sdt,$email,$diachi,$data);
 				if ($result == true) {
-					header("location:".path."?controller=user&action=login&register=true");
+					header("location:".path."?controller=user&action=login");
 				}
 			}
 		}else{
 			header("location:".path."?controller=page&action=error");
 		}
+	
 		
 	}	
 	
@@ -132,22 +170,21 @@ class UserController extends BaseController{
 		$this->render3('user_profile1');
 	}
 	public function businessProfile(){
-		$this->render('business_profile');
+		$this->render4('business_profile');
 	}
 	public function indexAdmin(){
 		$this->render('index_admin');
 	}
-	public function checkFile(){
+	public function checkFile(){	
 		
 		if (isset($_SESSION['login']) && $_SESSION['login']==true) {
 				$baituyen =  $_GET['id'];
-				if (isset($_POST['submit']) && isset($_FILES['CVcongviec'])) {
+				if (isset($_POST['submit']) && isset($_FILES['CVcongviec']['name']) && $_FILES['CVcongviec']['size'] > 0) {
 					$name = $_FILES['CVcongviec']['name'];
 					$type = $_FILES['CVcongviec']['type'];
 					$size = $_FILES['CVcongviec']['size'];
 					$tmp = $_FILES['CVcongviec']['tmp_name'];
 					$thanhvien = $_SESSION['tv'];
-					
 
 					move_uploaded_file($tmp,"upload/cvupload/".$name);
 						$user = new User();
@@ -162,10 +199,45 @@ class UserController extends BaseController{
 
 				}
 		}else{
-			header("location:".path."?controller=user&action=login");
+			$_SESSION['detail'] = $_GET['id'];
+			header("location:".path."?controller=user&action=userLogin");
 		}
 	}
+
+	public function saveJob(){
+		$idbt = $_GET['id'];
+		$idtv = $_SESSION['tv'];
+		$user_save = new User();
+		$result = $user_save->saveJob($idbt,$idtv);
+		if ($result==true) {
+			header("location:".path.'/?controller=job&action=detail&id='.$idbt);
+		}else{
+			die();
+		}
+
+	}
+	public function userSaveJob(){
+		$job = new User();
+		$data = $job->getSaveJob($_SESSION['tv']);	
+		$this->render3("user_save",$data);
+		
+	}
+	public function userInfo(){
+		$userInfo = new User();
+		$data1 = $userInfo->userInfo($_SESSION['tv']);
+		$data2 = $userInfo->getCity();
+		$data3= $userInfo->getJob();
+		$data = array(
+				'city'=>$data2,
+				'info'=>$data1,
+				'job'=>$data3
+		);
+		
+		$this->render3("userInfo",$data);
+		
+	}
 }
+
 		
 // 	public function userGETCV{}
 // }

@@ -1,3 +1,4 @@
+
 <div class="promo-block">
             <div class="container">
                 <div class="margin-b-40">
@@ -20,7 +21,22 @@
                                 <h5><?php echo $data['ten'] ?></h5>
                             </div><br>
                             <p style="color: black;margin-left: 20px">Ngày Đăng: <?php echo date("d-m-Y",strtotime($data['ngaydang'])); ?></p>
-                            <a href="#" class="btn btn-default" style="margin-left: 20px;"><i class="far fa-star" style="color: yellow;"></i> Lưu việc làm</a>
+
+                            <?php 
+                                if (isset($_SESSION['tv'])) {
+                                $sql = "SELECT id_baituyen,id_thanhvien FROM tb_luuvieclam WHERE id_baituyen ='".$data['id_baituyen']."' AND id_thanhvien ='".$_SESSION['tv']."'";
+                                $stmt=DB::getInstance()->prepare($sql);
+                                $stmt->execute();
+                                $count = $stmt->rowCount();
+                                if ($count>0) {
+                             ?>
+                            <span class="btn btn-danger" style="margin-left: 20px;"><i class="far fa-star" style="color: yellow;"></i> Đã Lưu</span>
+                            <?php }else{ ?>
+                                <a href="?controller=user&action=saveJob&id=<?php echo $data['id_baituyen'] ?>" class="btn btn-success" style="margin-left: 20px;"><i class="far fa-star" style="color: yellow;"></i>Lưu Việc Làm</a>
+                            <?php }}else{ ?>
+                                 <a href="?controller=user&action=saveJob&id=<?php echo $data['id_baituyen'] ?>" class="btn btn-success" style="margin-left: 20px;"><i class="far fa-star" style="color: yellow;"></i>Lưu Việc Làm</a>
+
+                            <?php } ?>
                              <h3 style="text-align: center;">Thông tin tuyển dụng</h3>
                             <div class="thong-tin-td-left" style="margin-left: 60px;">
                                     <p style="color: black;">Địa điểm làm viêc: <span style="color:red;font-size: 15px;font-weight: bold;"><?php echo $data['ten_tp']; ?></span></p>
@@ -73,11 +89,11 @@
                                              
                                               
                                          ?>
-                                        <input type="submit" name="submit" value="ĐÃ NỘP HỒ SƠ" class="btn btn-danger form-control" style="background:red;margin-left: 20px;width: 95%;height: 40px" disabled>
-                                        <?php }else{  echo "<script type='text/javascript'>alert('Mời thêm file CV bên dưới trước khi nộp hồ sơ');</script>" ?>
-                                        <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px">
+                                        <input type="submit" name="submit" value="ĐÃ NỘP HỒ SƠ" class="btn btn-danger" style="background:red;margin-left: 20px;width: 95%;height: 40px" disabled>
+                                        <?php }else{   ?>
+                                        <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success" style="margin-left: 20px;width: 95%;height: 40px">
                                     <?php }}else{?>
-                                        <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success form-control" style="margin-left: 20px;width: 95%;height: 40px,background:#2e6da4;">
+                                        <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success " style="margin-left: 20px;width: 95%;height: 40px,background:#2e6da4;">
                                     <?php } ?>
                                     </form>
 

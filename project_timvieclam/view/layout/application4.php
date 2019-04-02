@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>viec-da-ung</title>
+    <title>trang-doanh-nghiep</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="asset/css/bootstrap.css" rel="stylesheet" />
     <!-- datatable -->
@@ -35,45 +35,54 @@
                 <a class="navbar-brand" href="?controller=job&action=index"><img class="logo-img logo-img-main" src="asset/img/logo1.png" width="140px" style="margin-top: -20px;"></a> 
             </div>
             <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;float: left"><a href="?controller=job&action=index" class="btn btn-danger square-btn-adjust" style="border-radius: 5px;">Trang Chủ</a> </div> 
-  <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Chào: <?php echo $_SESSION['ten']; ?> &nbsp; <a href="?controller=user&action=logout" class="btn btn-danger square-btn-adjust" style="border-radius: 5px;">Logout</a> </div>
+          <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;"> Chào: <?php echo $_SESSION['ten']; ?> &nbsp; <a href="?controller=user&action=logout" class="btn btn-danger square-btn-adjust" style="border-radius: 5px;">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation" style="position: fixed;z-index: 10;">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-                <li class="text-center">
+				<li class="text-center">
                     <img src="asset/img/find_user.png" class="user-image img-responsive">
-                    </li>
-                
-                    
-                    <li>
-                        <a  href="?controller=user&action=userInfo"><i class="fas fa-clipboard-list fa-1x"></i> Quản lý hồ sơ</a>
+					</li>
+				
+					
+                     <li>
+                        <a  href="quan-ly-ho-so-dn.html"><i class="fas fa-clipboard-list fa-1x"></i> Quản lý hồ sơ</a>
                     </li>
                      <li>
-                        <a href="#"><i class="fa fa-sitemap fa-1x"></i> Quản lý việc làm<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-1x"></i> Tuyển dụng<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="?controller=user&action=userJobSent">Việc làm đã ứng tuyển</a>
+                                <a href="dang-tin-tuyen-dung.html">Đăng tin tuyển dụng</a>
                             </li>
                             <li>
-                                <a href="?controller=user&action=userSaveJob">Việc làm đã lưu</a>
+                                <a href="tat-ca-tin-tuyen-dung.html">Tất cả tin tuyển dụng</a>
+                            </li>
+                            
+                        </ul>
+                      </li> 
+                      <li>
+                        <a href="#"><i class="fa fa-sitemap fa-1x"></i> Quản lý hồ sơ<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="ho-so-da-luu.html">Hồ sơ đã lưu</a>
                             </li>
                             <li>
-                                <a href="cong-viec-phu-hop.html">Công việc phù hợp</a>
+                                <a href="ho-so-da-xem.html">Hồ sơ đã xem</a>
+                            </li>
+                            <li>
+                                <a href="ho-so-da-tuyen.html">Hồ sơ đã tuyển</a>
                             </li>
                         </ul>
-                      </li>                
+                      </li>                     
                     <li>
                         <a href="#"><i class="fas fa-envelope fa-1x"></i> Tin nhắn<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="hop-thu-den.html">Hộp thư đến</a>
+                                <a href="hop-thu-den-dn.html">Hộp thư đến</a>
                             </li>
                             <li>
-                                <a href="hop-thu-di.html">Hộp thư đi</a>
+                                <a href="hop-thu-di-dn.html">Hộp thư đi</a>
                             </li>
                            
                         </ul>
@@ -82,24 +91,24 @@ font-size: 16px;"> Chào: <?php echo $_SESSION['ten']; ?> &nbsp; <a href="?contr
                         <a href="#"><i class="fas fa-envelope fa-1x"></i> Thông tin cá nhân<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="thay-doi-mat-khau.html">Thay đổi mật khẩu</a>
+                                <a href="thay-doi-mat-khau-dn.html">Thay đổi mật khẩu</a>
                             </li>
                            
                         </ul>
                       </li>    
-                    
+                  	
                 </ul>
                
             </div>
             
         </nav>  
 
-     <!--========== SLIDER ==========-->
-       <?= @$content ?>
-        <!--========== FOOTER ==========-->
-         <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="asset/js/jquery-1.10.2.js"></script>
+  <?= @$content ?>
+
+
+
+
+  <script src="asset/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
     <script src="asset/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
@@ -117,7 +126,7 @@ font-size: 16px;"> Chào: <?php echo $_SESSION['ten']; ?> &nbsp; <a href="?contr
     </script>
     <script>
             $(document).ready(function () {
-                $('#dataTables-example10').dataTable();
+                $('#dataTables-example1').dataTable();
             });
     </script>
       <!-- CUSTOM SCRIPTS -->

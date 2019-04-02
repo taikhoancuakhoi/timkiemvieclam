@@ -1,0 +1,52 @@
+<div class="promo-block">
+            <div class="container">
+                <div class="margin-b-40">
+                    
+                </div>
+                                    
+            </div>
+        </div>
+        <br>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-5">
+                            <div class="left">
+                                <div class="button">
+                                    <div class="circle">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="?controller=user&action=userLogin">ĐĂNG NHẬP THÀNH VIÊN</a></h4>
+                                        <p><i class="fas fa-check" ></i> Công việc phù hợp nhanh chóng</p>
+                                        <p><i class="fas fa-check" ></i> Ứng tuyển công việc MIỄN PHÍ</p>
+                                        <p><i class="fas fa-check" ></i> Hiển thị thông tin hồ sơ với nhà tuyển dụng </p>
+                                    </div>
+                                    <div class="put">
+                                        <a href="?controller=user&action=userLogin"><button type="button" class="btn btn-primary">Đăng nhập thành viên</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="right">
+                                <div class="button">
+                                        <div class="circle" style="background: #fc205c;">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="?controller=user&action=businessLogin">ĐĂNG NHẬP NHÀ TUYỂN DỤNG</a></h4>
+                                        <p><i class="fas fa-check" ></i> Nhiều ứng viên tiếp cận thông tin</p>
+                                        <p><i class="fas fa-check" ></i> Không giới hạn tương tác với ứng viên</p>
+                                        <p><i class="fas fa-check" ></i> Quảng cáo với lượt xem follow từ ứng viên</p>
+                                    </div>
+                                    <div class="put">
+                                        <a href="?controller=user&action=businessLogin"><button type="button" class="btn btn-danger" style="background: #ff4949;">Đăng nhập nhà tuyển dụng</button></a>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div><br>

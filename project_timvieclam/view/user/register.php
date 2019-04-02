@@ -83,7 +83,7 @@
                                         <i class="far fa-edit"></i>
                                     </div>
                                     <div class="text">
-                                        <h4><a href="login-dn.html">ĐĂNG KÝ NHÀ TUYỂN DỤNG</a></h4>
+                                        <h4><a href="?controller=user&action=businessRegister&tk=3">ĐĂNG KÝ NHÀ TUYỂN DỤNG</a></h4>
                                         <p><i class="fas fa-check" ></i> Nhiều ứng viên tiếp cận thông tin</p>
                                         <p><i class="fas fa-check" ></i> Không giới hạn tương tác với ứng viên</p>
                                         <p><i class="fas fa-check" ></i> Quảng cáo với lượt xem follow từ ứng viên</p>

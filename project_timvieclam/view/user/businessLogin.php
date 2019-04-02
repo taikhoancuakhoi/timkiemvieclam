@@ -11,14 +11,14 @@
     <div class="col-md-4 col-md-offset-4" style="box-shadow: 1px 1px 1px 1px #ccc;">
       <br>
       <!-- Nav tabs -->
-      <h3 style="text-align: center;">Đăng Nhập</h3>
+      <h3 style="text-align: center;">Đăng Nhập Nhà Tuyển Dụng</h3>
       
       
       <div class="tab">
        
         <div class="tab" >
           <br>  
-          <form action="?controller=user&action=checkLogin" method="POST">
+          <form action="?controller=user&action=checkBusinessLogin" method="POST"  >
           <fieldset>
             <div class="form-group">
               <div class="right">

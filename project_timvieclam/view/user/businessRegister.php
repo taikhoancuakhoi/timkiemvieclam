@@ -1,4 +1,4 @@
-    <div class="row">
+<!--     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
                             <div class="login">
@@ -92,4 +92,84 @@
                             </div>
                         </div>
                         <div class="col-lg-2"></div>
-                    </div>
+                    </div> -->
+<div class="promo-block">
+            <div class="container">
+                <div class="margin-b-40">
+                </div>
+                                    
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+    <div class="col-md-4 col-md-offset-4" style="box-shadow: 1px 1px 1px 1px #ccc;">
+      <br>
+      <!-- Nav tabs -->
+      <h3>Đăng ký cho nhà tuyển dụng</h3>
+      
+      
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="new">
+          <br>
+          <form method="POST" action="?controller=user&action=checkBusinessRegister">
+          <fieldset>
+            <h5>Tài khoản <span style="color: red;">*</span></h5>
+            <div class="form-group">
+              <div class="right-inner-addon">
+                <b>Nhập email</b>
+                <input class="form-control input-lg" name="txt_email" placeholder="Nhập email" type="text" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="right-inner-addon">
+                <b>Nhập mật khẩu</b>
+                <input class="form-control input-lg" name="txt_pass" placeholder="Password" type="password" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="right-inner-addon">
+                <b>Nhập lại mật khẩu</b>
+                <input class="form-control input-lg" name="txt_passreset" placeholder="Nhập lại Password" id="" type="password" required>
+              </div>
+            </div><hr style="border: 0.4px solid black">
+            <h5>Thông tin công ty <span style="color: red;">*</span></h5>
+            <div class="form-group">
+              <div class="right-inner-addon">
+                <b>Tên Nhà Tuyển Dụng</b>
+                <input class="form-control input-lg" placeholder="" name="txt_tenntd" id="" type="text" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="right-inner-addon">
+                <b>Số điện thoại liên hệ</b>
+                <input class="form-control input-lg" name="txt_sdt" placeholder="" id="" type="number" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="right-inner-addon">
+                <b>Địa chỉ công ty</b>
+                <input class="form-control input-lg" placeholder="Địa chỉ công ty" name="txt_diachi" id="" type="text" required>
+              </div>
+            </div>
+            <select name="txt_loaitk" id="">
+                            <option value="<?php echo $_GET['tk']; ?>">Nhà Tuyển Dụng</option>
+            </select>
+            <hr>
+            <div class="tab-content">
+            <div class="tab-pane fade in active text-center" id="pp">
+              <button class="btn btn-primary btn-lg btn-block" name="btnReg"><i class="fa fa-plus"></i> Đăng ký</button>
+            </div>
+          </div>
+          </fieldset>
+      </form>
+     
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+        </div>
+           <br>

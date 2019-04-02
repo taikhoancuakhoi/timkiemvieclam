@@ -27,12 +27,15 @@ class JobController extends BaseController{
 		$jobDetail = new Job();
 		$data = $jobDetail->getJobDetail($_GET['id']);
 		$this->render2("detail1",$data);
-		// if (isset($_GET['id'])) {
-		// 	echo "<script type=text/javascript>alert('Hãy thêm file CV của bạn bên dưới')</script>";
-		// }else{
-		// 	header("location:".path."?controller=job&action=index");
-		// }
-	}
+		if (isset($_SESSION['login']) && $_SESSION['login']=='true') {
+			unset($_SESSION['detail']);
+		}
+		 // if (isset($_GET['id'])) {
+		 // 	echo "<script type=text/javascript>alert('Hãy thêm file CV của bạn bên dưới')</script>";
+		 // }else{
+			// header("location:".path."?controller=job&action=index");
+		 // }
+	}	
 	
 	public function jobSearch(){
 		if (isset($_POST['btn'])) {

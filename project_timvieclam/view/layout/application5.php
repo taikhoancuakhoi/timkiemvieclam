@@ -21,10 +21,12 @@
         <link href="asset/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
 
         <!-- THEME STYLES -->
-        <link href="asset/css/layout2.min.css" rel="stylesheet" type="text/css"/>
+        <link href="asset/css/layout3.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="asset/css/style.css">
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     </head>
     <!-- END HEAD -->
 
@@ -60,6 +62,7 @@
                             <ul class="nav navbar-nav navbar-nav-right">
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=job&action=index">Trang chủ</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="?controller=job&action=camnang">Cẩm nang</a></li>
+                                
                                 <?php 
                                         if(isset($_SESSION['login']) && $_SESSION['login']==true){
                                             if (isset($_SESSION['quyen']) && $_SESSION['quyen']=='3') {
@@ -101,10 +104,11 @@
             <!-- Navbar -->
         </header>
         <!--========== END HEADER ==========-->
+      
         <!--========== SLIDER ==========-->
-       <?= @$content ?>
-        <!--========== FOOTER ==========-->
-        <footer class="footer" style="margin-bottom: -100px;">
+      <?= @$content ?>
+
+       <footer class="footer">
             <!-- Links -->
             <div class="section-seperator">
                 <div class="content-md container">
@@ -142,11 +146,7 @@
                     <!--// end row -->
                 </div>
             </div>
-            <!-- End Links -->
-
-            <!-- Copyright -->
             
-            <!-- End Copyright -->
         </footer>
         <!--========== END FOOTER ==========-->
 
@@ -155,27 +155,27 @@
 
         <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
         <!-- CORE PLUGINS -->
-        <script src="asset/vendor/jquery.min.js" type="text/javascript"></script>
-        <script src="asset/vendor/jquery-migrate.min.js" type="text/javascript"></script>
-        <script src="asset/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
         <!-- PAGE LEVEL PLUGINS -->
-        <script src="asset/vendor/jquery.easing.js" type="text/javascript"></script>
-        <script src="asset/vendor/jquery.back-to-top.js" type="text/javascript"></script>
-        <script src="asset/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
-        <script src="asset/vendor/jquery.wow.min.js" type="text/javascript"></script>
-        <script src="asset/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
-        <script src="asset/vendor/magnific-popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
-        <script src="asset/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
-        <script src="asset/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="assets/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="assets/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="assets/vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="assets/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
 
         <!-- PAGE LEVEL SCRIPTS -->
-        <script src="asset/js/layout.min.js" type="text/javascript"></script>
-        <script src="asset/js/components/wow.min.js" type="text/javascript"></script>
-        <script src="asset/js/components/swiper.min.js" type="text/javascript"></script>
-        <script src="asset/js/components/maginific-popup.min.js" type="text/javascript"></script>
-        <script src="asset/js/components/masonry.min.js" type="text/javascript"></script>
-        <script src="asset/js/components/gmap.min.js" type="text/javascript"></script>
+        <script src="assets/js/layout.min.js" type="text/javascript"></script>
+        <script src="assets/js/components/wow.min.js" type="text/javascript"></script>
+        <script src="assets/js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="assets/js/components/maginific-popup.min.js" type="text/javascript"></script>
+        <script src="assets/js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="assets/js/components/gmap.min.js" type="text/javascript"></script>
 
     </body>
     <!-- END BODY -->
