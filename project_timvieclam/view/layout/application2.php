@@ -45,7 +45,7 @@
 
                         
                         <div class="logo">
-                            <a class="logo-wrap" href="index.html">
+                            <a class="logo-wrap" href="?controller=job&action=index">
                                 <img class="logo-img logo-img-main" src="asset/img/logo1.png" >
                                 <img class="logo-img logo-img-active" src="asset/img/logo.png">
                             </a>

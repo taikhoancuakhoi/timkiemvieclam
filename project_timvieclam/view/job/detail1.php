@@ -20,10 +20,10 @@
                                 <h4><?php echo $data['tieude']; ?></h4>
                                 <h5><?php echo $data['ten'] ?></h5>
                             </div><br>
-                            <p style="color: black;margin-left: 20px">Ngày Đăng: <?php echo date("d-m-Y",strtotime($data['ngaydang'])); ?></p>
+                            <p style="color: black;margin-left: 20px">Ngày Đăng: <?php echo date("d/m/Y",strtotime($data['ngaydang'])); ?></p>
 
                             <?php 
-                                if (isset($_SESSION['tv'])) {
+                                if (isset($_SESSION['tv']) && $_SESSION['quyen']=='2') {
                                 $sql = "SELECT id_baituyen,id_thanhvien FROM tb_luuvieclam WHERE id_baituyen ='".$data['id_baituyen']."' AND id_thanhvien ='".$_SESSION['tv']."'";
                                 $stmt=DB::getInstance()->prepare($sql);
                                 $stmt->execute();
@@ -47,7 +47,7 @@
                             </div>
                             <div class="thong-tin-td-right" style="float: right;margin-top: -145px;margin-right: 40px;  ">
                                 <p style="color: black;">Lương: <span style="color:red;font-size: 15px;font-weight: bold;"><?php echo $data['mucluong']; ?></span></p>
-                                <p style="color: black;">Hạn nộp: <span style="color:red;font-size: 15px;font-weight: bold;"><?php echo $data['hannop']; ?></span></p>
+                                <p style="color: black;">Hạn nộp: <span style="color:red;font-size: 15px;font-weight: bold;"><?php echo date("d/m/Y",strtotime($data['hannop'])); ?></span></p>
                                 <p style="color: black;">Yêu cầu giới tính: <span style="color:red;font-size: 15px;font-weight: bold;"><?php 
                                                 if ($data['gioitinh'] == 1) {
                                                     echo "Nữ";
@@ -72,7 +72,8 @@
                                <!--  <p style="color: black">Email liên hệ:
                                 </p> -->
                             </div>
-                            
+                                <?php if (isset($_SESSION['quyen']) && $_SESSION['quyen']==2) { ?>
+                                
                              <form action="?controller=user&action=checkFile&id=<?php echo $_GET['id']; ?>" method="POST" enctype="multipart/form-data">
                                         <input type="file" name="CVcongviec" style="margin:10px 20px">
                                         <?php 
@@ -96,7 +97,9 @@
                                         <input type="submit" name="submit" value="NỘP HỒ SƠ" class="btn btn-success " style="margin-left: 20px;width: 95%;height: 40px,background:#2e6da4;">
                                     <?php } ?>
                                     </form>
-
+                                <?php }else{ ?>
+                                <br><br>
+                                <?php }  ?>
                         </div><br> 
                         
 

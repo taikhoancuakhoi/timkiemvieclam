@@ -19,6 +19,7 @@
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
         <!-- TABLE STYLES-->
     <link href="asset/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    <script type="text/javascript" src="asset/ckeditor/ckeditor.js"></script>
    <!-- script -->
    
 </head>
@@ -53,10 +54,10 @@
                         <a href="#"><i class="fa fa-sitemap fa-1x"></i> Tuyển dụng<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="dang-tin-tuyen-dung.html">Đăng tin tuyển dụng</a>
+                                <a href="?controller=user&action=businessPost">Đăng tin tuyển dụng</a>
                             </li>
                             <li>
-                                <a href="tat-ca-tin-tuyen-dung.html">Tất cả tin tuyển dụng</a>
+                                <a href="?controller=user&action=showTinTd">Tất cả tin tuyển dụng</a>
                             </li>
                             
                         </ul>
@@ -71,7 +72,7 @@
                                 <a href="ho-so-da-xem.html">Hồ sơ đã xem</a>
                             </li>
                             <li>
-                                <a href="ho-so-da-tuyen.html">Hồ sơ đã tuyển</a>
+                                <a href="?controller=user&action=hoSoDaTuyen">Hồ sơ đã tuyển</a>
                             </li>
                         </ul>
                       </li>                     
